@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>html练习</title>
+    <title>html-basic</title>
   </head>
   <body>
     <h1>Lorem.</h1>
@@ -89,8 +89,6 @@
       <dd>豆豆</dd>
     </dl>
     <hr />
-    44
-    <form>
       <h1>Google搜索</h1>
       <br />
       <form action="https://www.google.com.hk/search">
@@ -105,8 +103,6 @@
         <button>在新窗口打开搜索结果</button>
       </form>
       <hr />
-    </form>
-    <form>
       <p><b>个人信息调查表</b></p>
       <dl>
         <dt>性别</dt>
@@ -120,13 +116,77 @@
         <dt>生辰</dt>
         <dd><input type="time" /></dd>
         <dt>照片</dt>
+        <label>点我上传照片，我比文件上传按钮好看<input hidden type="file" name="" id=""></label></dd>
         <dt>肤色</dt>
         <dd><input type="color" /></dd>
         <dt>自我介绍</dt>
         <dd>
-          <textarea cols="15" rows="5">&lt;/textarea&gt;</textarea>
+          <textarea cols="60" rows="5">&lt;/textarea&gt;</textarea>
         </dd>
       </dl>
-    </form>
+      <fieldset disabled="">
+        <legend>这里面的全都禁用了</legend>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+      </fieldset>
+      <button>提交</button>
+      <button type="reset">重置</button>
+    <hr>
+    <table border="2">
+        <caption>货品列表</caption>
+        <thead>
+          <th>编号</th>
+          <th bgcolor="#FF4500">品名</th>
+          <th>进价</th>
+          <th>出价</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>001</b></td>
+            <td bgcolor="#FF4500">苹果</td>
+            <td rowspan="2">5</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td><b>002</b></td>
+            <td bgcolor="#FF4500">橘子</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td><b>003</b></td>
+            <td bgcolor="#FF4500">香蕉</td>
+            <td>5</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td><b>004</b></td>
+            <td bgcolor="#FF4500">山竹</td>
+            <td>5</td>
+            <td>8</td>
+          </tr>
+        </tbody>
+    </table>
+    <hr>
+    <img title="你大爷还是你大爷" 
+    src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3080040726,2263453394&fm=26&gp=0.jpg" 
+    width=300 usemap="#map1" alt="这是你大爷">
+  <map name="map1">
+    <area shape="rect" coords="0,0,75,40" href="https://www.cctv.com" target="_blank" title="CCTV">
+    <area shape="circle" coords="175,85,55" href="https://www.taobao.com" target="_blank" title="taobao"> 
+    <area shape="poly" coords="" href="https://www.baidu.com/" target="_blank" title="baidu">
+  </map>
+  <hr>
+  <a href="https://www.mi.com" target="frame1">点击我会在下面的frame里打开小米商场，但为什么打不开呢？</a>
+  <br>
+  <iframe src="https://nodejs.org" name="frame1" frameborder="1"></iframe>
+  <div>
+    怎样&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在这两个字之间空这么大呢？
+    <br>
+    怎样在页面中显示下面的内容呢？
+    <br>
+    &lt;span>&lt;/span>
+  </div>
   </body>
 </html>
