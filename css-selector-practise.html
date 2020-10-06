@@ -6,13 +6,13 @@
   </head>
   <body>
     <style>
-      p.a.c:focus {
+      p:focus {
         color: blue;
       }
-      p.a.c:hover {
+      p[tabindex="-1"]:hover {
         color: red;
       }
-      p.a.c:active {
+      p[tabindex="-1"]:active {
         color: green;
       }
       a:visited {
@@ -21,13 +21,13 @@
       a:link {
         color: pink;
       }
-      a[herf^="mailto" i] {
+      a[herf^="mailto" i]: {
         color: blue;
       }
       a[herf^="tel"] {
         color: yellow;
       }
-      a[herf$="pdf"] {
+      a[herf$="pdf" i] {
         font-size: 30px;
       }
       .a > ul > li:nth-child(n + 4):nth-child(-n + 7) {
@@ -58,7 +58,7 @@
       鼠标悬浮时为红色，按下去时为绿色，获得焦点时为蓝色
     </p>
 
-    <p class="a c">
+    <p class="a.c">
       <span>
         红色
         <span>绿色</span>
