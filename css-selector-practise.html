@@ -6,6 +6,9 @@
   </head>
   <body>
     <style>
+      body > p:first-child {
+        color: red;
+      }
       p:focus {
         color: blue;
       }
@@ -15,19 +18,28 @@
       p[tabindex="-1"]:active {
         color: green;
       }
-      a:visited {
-        color: orange;
+      .a.c > span {
+        color: red;
       }
-      a:link {
-        color: pink;
+      .a.c > span > span:nth-child(1) {
+        color: green;
       }
-      a[herf^="mailto" i]: {
+      .a.c > span > span:nth-child(2) {
         color: blue;
       }
-      a[herf^="tel"] {
+      .a.c + div a:visited {
+        color: orange;
+      }
+      .a.c + div a:link {
+        color: pink;
+      }
+      a[href^="mailto:" i] {
+        color: blue;
+      }
+      a[href^="tel"] {
         color: yellow;
       }
-      a[herf$="pdf" i] {
+      a[href$="pdf" i] {
         font-size: 30px;
       }
       .a > ul > li:nth-child(n + 4):nth-child(-n + 7) {
@@ -58,7 +70,7 @@
       鼠标悬浮时为红色，按下去时为绿色，获得焦点时为蓝色
     </p>
 
-    <p class="a.c">
+    <p class="a c">
       <span>
         红色
         <span>绿色</span>
