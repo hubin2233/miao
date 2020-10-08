@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #top {
+        background-color: red;
+        margin: 20px;
+        padding-left: 360px;
+      }
+      #mid {
+        border: 2px black solid;
+        max-width: 600px;
+        max-height: 240px;
+        padding: 12px;
+        margin: auto;
+        box-sizing: border-box;
+      }
+      div > p {
+        overflow: auto;
+        height: 3em;
+      }
+      div > div {
+        height: 50px;
+        background-color: pink;
+      }
+      div > div:hover {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+      section {
+        margin: auto;
+        border: 50px solid red;
+        border-color: transparent transparent orange transparent;
+        width: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="top">aaaaa</p>
+    <div id="mid">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sapiente
+        voluptas officiis, praesentium, nemo iure cumque nihil, facere hic
+        asperiores dicta commodi magni, voluptates eaque esse atque nesciunt!
+        Cupiditate, modi.
+      </p>
+      <div></div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sapiente
+        voluptas officiis, praesentium, nemo iure cumque nihil, facere hic
+        asperiores dicta commodi magni, voluptates eaque esse atque nesciunt!
+        Cupiditate, modi.
+      </p>
+    </div>
+    <section id="bottom"></section>
+  </body>
+</html>
