@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        background-color: black;
+        color: white;
+      }
+      body{
+        margin: 0;
+      }
+      #title {
+      margin: auto;
+      width: 600px;
+     }
+      #main {
+        width: 600px;
+        margin: auto;
+      }
+      div > section>div {
+        border:3px black solid;
+        background-color: pink;
+        margin-top: 15px;
+        height: 34px;
+        width: 174px;
+        text-align: center;
+        line-height: 34px;
+      }
+      .list{
+      width: 600px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      }
+      div>section>div:hover {
+        background-color: red;
+      }
+      .list2 {
+        margin-left: 210px;
+        margin-top: -220px;
+      }
+      .list3 {
+        margin-left: 420px;
+        margin-top: -220px;
+      }
+
+      #bottom {
+        background-color: pink;
+      }
+      .block{
+        font-size: 0px;
+      }
+      .block span{    
+        width: 174px;
+        height: 34px;
+        border: 3px solid black;
+        display: inline-block;
+        font-size: 16px;
+        background-color: pink;
+        text-align: center;
+        line-height: 34px;
+        margin: 15px;
+      }
+      #b{
+        margin-top: -15px;
+      }
+      #c{
+        margin-top: -15px;
+      }
+      #d{
+        margin-top: -15px;
+      }
+      .block span:hover{
+        background-color: red;
+      }
+
+      .link {
+        border: 1px dotted transparent;
+        border-bottom-color: black;
+        width: 598px;
+        margin: 0 auto;
+      }
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p id="title"> world 请调整浏览器窗口大小查看效果</p>
+      </header>
+
+    <p id="main">
+      页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+      宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+      页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+      宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+      页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+      宽度600px
+    </p>
+    <div class="list">
+      <section class="list1">
+        <div>宽180高40(包含边框)</div>
+        <div>水平间隙30px</div>
+        <div>垂直间隙15px</div>
+        <div>边框宽度3px</div>
+      </section>
+      <section class="list2">
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+      </section>
+      <section class="list3">
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+        <div>产品</div>
+      </section>
+    </div>
+
+    <p class="block" id="a">
+      <span>宽180高40（包含边框)</span>
+      <span>产品</span>
+      <span>产品</span>
+    </p>
+    <p class="block" id="b">
+      <span>水平间隙30px</span>
+      <span>产品</span>
+      <span>产品</span>
+    </p>
+    <p class="block" id="c">
+      <span>垂直间隙15px</span>
+      <span>产品</span>
+      <span>产品</span>
+    </p>
+    <p class="block" id="d">
+      <span>边框宽度3px</span>
+      <span>产品</span>
+      <span>产品</span>
+    </p>
+    
+    <section class="link">
+      <div>link</ddiv>
+      <div>link</div>
+      <div>link</div>
+      <div>link</div>
+      <div>link</div>
+    </section>
+    <p id="bottom">
+      &copy;版权所有
+      <br />
+      本页所有布局均使用块元素
+    </p>
+  </body>
+</html>
