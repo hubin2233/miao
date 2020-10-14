@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .list-first {
+        border: 2px solid black;
+        text-align: left;
+      }
+      div span {
+        display: inline-block;
+        border: 1px solid;
+        font-size: 30px;
+        margin-left: 15px;
+        position: static;
+      }
+      ul {
+        list-style: none;
+        display: none;
+      }
+      li {
+        border: solid;
+        margin: 0;
+      }
+      #a:hover :not(.shouxuanxiang),
+      #b:hover ul,
+      #c:hover ul,
+      #d:hover ul {
+        display: block;
+      }
+      .wenjian {
+        position: absolute;
+        top: 15px;
+        left: -23px;
+      }
+      .bianji {
+        position: absolute;
+        top: 15px;
+        left: 59px;
+      }
+      .xuanze {
+        position: absolute;
+        top: 15px;
+        left: 140px;
+      }
+      .chakan {
+        position: absolute;
+        top: 15px;
+        left: 222px;
+      }
+      .sxx:hover ul {
+        display: block;
+      }
+      .shouxuanxiang {
+        position: fixed;
+        top: 180px;
+        left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="list-first">
+      <span id="a"
+        >文件
+        <ul class="wenjian">
+          <li>新建文件</li>
+          <li>新建窗口</li>
+          <li>打开文件</li>
+          <li class="sxx">
+            首选项
+            <ul class="shouxuanxiang">
+              <li>设置</li>
+              <li>扩展</li>
+              <li>联机服务设置</li>
+            </ul>
+          </li>
+        </ul>
+      </span>
+      <span id="b"
+        >编辑
+        <ul class="bianji">
+          <li>撤销</li>
+          <li>恢复</li>
+          <li>剪切</li>
+          <li>复制</li>
+        </ul>
+      </span>
+      <span id="c"
+        >选择
+        <ul class="xuanze">
+          <li>全选</li>
+          <li>展开所选内容</li>
+          <li>向上移动一行</li>
+          <li>向下移动一行</li>
+        </ul>
+      </span>
+      <span id="d"
+        >查看
+        <ul class="chakan">
+          <li>搜索</li>
+          <li>运行</li>
+          <li>扩展</li>
+          <li>输出</li>
+        </ul>
+      </span>
+    </div>
+  </body>
+</html>
