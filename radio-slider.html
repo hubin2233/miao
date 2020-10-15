@@ -5,42 +5,147 @@
     <meta name="viewport" content="width=im, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      div {
-        border: 5px solid greenyellow;
-        width: 960px;
-        height: 540px;
-        position: relative;
-        overflow: hidden;
-      }
-      input:nth-child(1):checked ~ div img:nth-child(1),
-      input:nth-child(2):checked ~ div img:nth-child(2),
-      input:nth-child(3):checked ~ div img:nth-child(3),
-      input:nth-child(4):checked ~ div img:nth-child(4),
-      input:nth-child(5):checked ~ div img:nth-child(5) {
-        opacity: 100;
-        z-index: 10;
-      }
-      img {
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        position: absolute;
-        transition: 2s;
-      }
+  
+  ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  width: 960px;
+  height: 540px;
+  border: 3px solid;
+  position: relative;
+  border: 3px solid yellowgreen;
+}
+section > input {
+  display: none;
+}
+
+section ul {
+  width: 100%;
+  height: 100%;
+  position: rela  tive;
+}
+
+section ul li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: .6s;
+}
+section ul li img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+section ul li label {
+  background-color: rgb(0,0,0,0.5);
+  cursor: pointer;
+  width: 25px;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+section ul li label:hover {
+  background-color: gold;
+}
+section ul li label:nth-last-child(2) {
+  left: 0;
+}
+section ul li label:nth-last-child(1) {
+  right: 0;
+}
+
+
+input:nth-child(1):checked ~ ul.img > li:nth-child(1),
+input:nth-child(2):checked ~ ul.img > li:nth-child(2),
+input:nth-child(3):checked ~ ul.img > li:nth-child(3),
+input:nth-child(4):checked ~ ul.img > li:nth-child(4),
+input:nth-child(5):checked ~ ul.img > li:nth-child(5){
+  opacity: 1;
+  z-index: 8;
+}
+
+section .buton {
+  width: 100%;
+  bottom: 0;
+  height: 30px;
+  position: absolute;
+  z-index: 30;
+  text-align: center;
+}
+
+section .buton {
+  display: inline-block;
+  background-color: white;
+  border-radius: 25px;
+}
+section .buton label {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  background-color: red;
+  margin-left: 3px;
+  margin-right: 3px;
+  cursor: pointer;
+}
+
+input:nth-child(1):checked ~ div.buton-wrapper  label:nth-child(1),
+input:nth-child(2):checked ~ div.buton-wrapper  label:nth-child(2),
+input:nth-child(3):checked ~ div.buton-wrapper  label:nth-child(3),
+input:nth-child(4):checked ~ div.buton-wrapper  label:nth-child(4),
+input:nth-child(5):checked ~ div.buton-wrapper  label:nth-child(5){
+  background-color: blue;
+}
+
+
+
+   
     </style>
   </head>
   <body>
-    <input type="radio" name="slider" id="A" />
-    <input type="radio" name="slider" id="B" />
-    <input type="radio" name="slider" id="C" />
-    <input type="radio" name="slider" id="D" />
-    <input type="radio" name="slider" id="E" />
-    <div>
-      <img src="https://w.wallhaven.cc/full/lm/wallhaven-lmxmxy.png" id="1" />
-      <img src="https://w.wallhaven.cc/full/g8/wallhaven-g83m3d.jpg" id="2" />
-      <img src="https://w.wallhaven.cc/full/2e/wallhaven-2em38y.jpg" id="3" />
-      <img src="https://w.wallhaven.cc/full/xl/wallhaven-xlq1rv.jpg" id="4" />
-      <img src="https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg" id="5" />
+    <section>
+    <input type="radio" name="slider" id="p1"  checked/>
+    <input type="radio" name="slider" id="p2" />
+    <input type="radio" name="slider" id="p3" />
+    <input type="radio" name="slider" id="p4" />
+    <input type="radio" name="slider" id="p5" />
+  
+    <ul class="img">
+      <li><a href="#"><img src="https://w.wallhaven.cc/full/lm/wallhaven-lmxmxy.png" id="1" />
+      <label for="p5"></label>
+      <label for="p2"></label>
+      </a></li>
+      <li><a href="#"><img src="https://w.wallhaven.cc/full/g8/wallhaven-g83m3d.jpg" id="2" /></a>
+        <label for="p1"></label><label for="p3"></label>
+      </li>
+      <li><a href="#"><img src="https://w.wallhaven.cc/full/2e/wallhaven-2em38y.jpg" id="3" /></a>
+        <label for="p2"></label><label for="p4"></label>
+      </li>
+      <li><a href="#"><img src="https://w.wallhaven.cc/full/xl/wallhaven-xlq1rv.jpg" id="4" /></a>
+        <label for="p3"></label><label for="p5"></label>
+      </li>
+      <li><a href="#"><img src="https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg" id="5" /></a>
+        <label for="p4"></label><label for="p1"></label>
+      </li>
+    </ul>
+    <div class="buton">
+      <label for="p1"></label>
+      <label for="p2"></label>
+      <label for="p3"></label>
+      <label for="p4"></label>
+      <label for="p5"></label>
     </div>
-  </body>
+  </section>
+
 </html>
