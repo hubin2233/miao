@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      section {
+      .position {
         position: relative;
       }
       div {
@@ -96,6 +96,24 @@
         z-index: 999999;
         color: red;
       }
+      .table {
+        position: relative;
+        top: 600px;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        border: 10px dashed blue;
+        width: 150px;
+        height: 150px;
+        font-size: 60px;
+        text-align: center;
+      }
+      td:hover {
+        border: 10px solid red;
+        color: red;
+      }
     </style>
   </head>
   <body>
@@ -127,6 +145,32 @@
         <p class="t8">8</p>
         <p class="t9">9</p>
       </span>
+    </section>
+    <section class="table">
+      <table>
+        <colgroup>
+          <col />
+          <col />
+          <col />
+        </colgroup>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
   </body>
 </html>
