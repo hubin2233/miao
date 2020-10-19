@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>浮动布局练习</title>
+    <style>
+      *{
+        margin: 0;
+        xbox-shadow: 0 0 0 0.5px red;
+      }
+      section{
+        width: 360px;
+        margin: auto;
+      }
+      div{
+        margin: 15px;
+        border: 5px solid red;
+        box-sizing: border-box;
+
+      }
+      div:not(.big){
+        width: 90px;
+        height: 90px;
+        float: left;
+      }
+      .big{
+        width: 210px;
+        height: 210px;
+      }
+      #big1,#big3{
+        float: left;
+      }
+      #big2{
+        float: right;
+      }
+
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="big" id="big1"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="big" id="big2"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div class="big" id="big3"></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </body>
+</html>

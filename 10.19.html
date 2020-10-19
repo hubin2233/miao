@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dl列表</title>
+    <style>
+      * {
+        box-shadow: 0 0 0 0.5px red;
+        margin: 0px;
+      }
+      section dl {
+        width: 200px;
+        list-style: none;
+      }
+
+      section dl dd {
+        display: inline-block;
+        margin-left: 0px;
+        position: relative;
+        left: 40px;
+        top: -21px;
+      }
+      :invalid {
+        margin-top: 0px;
+      }
+      div dl {
+        width: 200px;
+      }
+      div dl dd {
+        float: left;
+        margin-left: 0px;
+      }
+      div dl dt {
+        width: auto;
+        clear: both;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>定位布局</h2>
+    <section class="line-block">
+      <dl>
+        <dt>导演:</dt>
+        <dd>张艺谋</dd>
+
+        <dt>主演:</dt>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+
+        <dt>副演:</dt>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张六六六六</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>zhangsan</dd>
+
+        <dt>编剧:</dt>
+        <dd>张艺谋</dd>
+      </dl>
+    </section>
+    <hr />
+    <h2>浮动布局</h2>
+    <div>
+      <dl>
+        <dt>导演:</dt>
+        <dd>张艺谋</dd>
+        <dt>主演:</dt>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dt>副演:</dt>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张六六六六</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>张三</dd>
+        <dd>zhangsan</dd>
+        <dt>编剧:</dt>
+        <dd>张艺谋</dd>
+      </dl>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>圆角按钮t</title>
+    <style>
+      input {
+        visibility: hidden;
+      }
+      label {
+        width: 400px;
+        height: 200px;
+        box-sizing: border-box;
+        border: 10px solid rgb(156, 155, 155);
+        position: relative;
+        border-radius: 100px;
+        display: block;
+        transition: 1s;
+      }
+      span {
+        display: inline-block;
+        box-sizing: border-box;
+        width: 170px;
+        height: 170px;
+        border-radius: 85px;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        box-shadow: 0 0 5px 1px grey;
+        z-index: 10;
+        background: white;
+        transition: 1s;
+      }
+      input:checked + label {
+        border-color: rgb(130, 243, 108);
+        box-shadow: 0 0 2px 90px rgb(139, 253, 154) inset;
+      }
+      input:checked + label span {
+        margin-left: 190px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="checkbox" id="yc" />
+    <label for="yc">
+      <span></span>
+    </label>
+  </body>
+</html>
