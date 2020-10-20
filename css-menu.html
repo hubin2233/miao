@@ -3,115 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>菜单</title>
     <style>
-      body {
-        margin: 0;
-      }
-      .list-first {
-        border: 2px solid black;
-        text-align: left;
-      }
-      div span {
-        display: inline-block;
-        border: 1px solid;
-        font-size: 30px;
-        margin-left: 15px;
-        position: static;
+      * {
+        margin: 0px;
+        box-shadow: 0 0 0 0.5px grey;
       }
       ul {
+        display: inline;
+        position: relative;
         list-style: none;
-        display: none;
       }
-      li {
-        border: solid;
-        margin: 0;
+      .list1 {
+        display: inline-block;
+        position: relative;
+        border-radius: 2px 2px 0 0;
+        margin-right: 30px;
+        font-size: 15px;
       }
-      #a:hover :not(.shouxuanxiang),
-      #b:hover ul,
-      #c:hover ul,
-      #d:hover ul {
-        display: block;
-      }
-      .wenjian {
+      .list2-fru {
         position: absolute;
-        top: 15px;
-        left: -23px;
-      }
-      .bianji {
-        position: absolute;
-        top: 15px;
-        left: 59px;
-      }
-      .xuanze {
-        position: absolute;
-        top: 15px;
-        left: 140px;
-      }
-      .chakan {
-        position: absolute;
-        top: 15px;
-        left: 222px;
-      }
-      .sxx:hover ul {
-        display: block;
-      }
-      .shouxuanxiang {
-        position: fixed;
-        top: 180px;
-        left: 100px;
-      }
-      li:hover,
-      span:hover {
-        background-color: gold;
+        top: 21px;
+        left: 0px;
       }
     </style>
   </head>
   <body>
-    <div class="list-first">
-      <span id="a"
-        >文件
-        <ul class="wenjian">
-          <li>新建文件</li>
-          <li>新建窗口</li>
-          <li>打开文件</li>
-          <li class="sxx">
-            首选项
-            <ul class="shouxuanxiang">
-              <li>设置</li>
-              <li>扩展</li>
-              <li>联机服务设置</li>
-            </ul>
-          </li>
+    <ul>
+      <li class="list1 fru">
+        水果
+        <ul class="list2-fru">
+          <li>葡萄</li>
+          <li>橘子</li>
+          <li>苹果</li>
+          <li>香蕉</li>
         </ul>
-      </span>
-      <span id="b"
-        >编辑
-        <ul class="bianji">
-          <li>撤销</li>
-          <li>恢复</li>
-          <li>剪切</li>
-          <li>复制</li>
-        </ul>
-      </span>
-      <span id="c"
-        >选择
-        <ul class="xuanze">
-          <li>全选</li>
-          <li>展开所选内容</li>
-          <li>向上移动一行</li>
-          <li>向下移动一行</li>
-        </ul>
-      </span>
-      <span id="d"
-        >查看
-        <ul class="chakan">
-          <li>搜索</li>
-          <li>运行</li>
-          <li>扩展</li>
-          <li>输出</li>
-        </ul>
-      </span>
-    </div>
+      </li>
+      <li class="list1 veg">蔬菜</li>
+      <li class="list1 tra">交通工具</li>
+      <li class="list1 ele">电子产品</li>
+    </ul>
   </body>
 </html>
