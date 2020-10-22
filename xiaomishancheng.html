@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小米商城</title>
+    <link rel="icon" href="image-xiaomi/favicon.ico" type="image/x-icon" />
+    <style>
+      * {
+        margin: 0;
+        xbox-shadow: 0 0 0 0.5px red;
+      }
+      /* ----最上方黑色导航栏--------------------------------------------------------------------- */
+      .top {
+        height: 120px;
+        background-image: url(image-xiaomi/top.png);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+      }
+      .black-nav {
+        position: relative;
+        height: 40px;
+        width: auto;
+        background-color: rgb(51, 51, 51);
+        font: 12px/40px "Helvetica Neue", "Helvetica,Arial", "Microsoft Yahei";
+        color: rgb(176, 176, 176);
+        padding-left: 60px;
+        xoverflow: hidden;
+      }
+      .black-nav span {
+        margin-left: 4px;
+      }
+      .black-nav span span {
+        margin-left: 4px;
+        font-weight: 100;
+      }
+      .black-nav .denglu {
+        margin-left: 239px;
+      }
+      .black-nav .pay {
+        background-image: url(image-xiaomi/gouwuche1.png);
+        background-repeat: no-repeat;
+        background-size: 20px;
+        background-position: 15px 10px;
+        display: inline-block;
+        width: 120px;
+        height: 100%;
+        box-sizing: border-box;
+        padding-right: 20px;
+        text-align: right;
+        margin-right: 60px;
+      }
+      .black-nav span:hover {
+        color: white;
+      }
+      .black-nav span:hover span {
+        color: rgb(176, 176, 176);
+      }
+      .pay:hover {
+        background-image: url(image-xiaomi/gouwuche2.png);
+        color: orange;
+        background-color: white;
+      }
+      .gouwuche {
+        overflow: hidden;
+        width: 320px;
+        height: 0px;
+        position: absolute;
+        top: 40px;
+        right: 60px;
+        text-align: center;
+        color: black;
+        box-shadow: 0 0 5px 1px gray;
+      }
+      .pay:hover div {
+        display: block;
+        height: 100px;
+        line-height: 100px;
+        transition: all 0.5s;
+      }
+
+      /* ----白色导航栏 ------------------------------------------------------------------------------ */
+      .white-nav {
+        height: 100px;
+        font-size: 16px;
+        position: relative;
+        line-height: 100px;
+        padding-left: 300px;
+      }
+      /* 左边小米logo */
+      .mi-logo {
+        display: inline-block;
+        width: 55px;
+        height: 55px;
+        position: absolute;
+        top: 25px;
+        left: 60px;
+        background-image: url(image-xiaomi/logo-mijia.jpg);
+        background-repeat: no-repeat;
+        background-size: 110px 55px;
+        background-position: right;
+        transition: 0.3s;
+      }
+      .mi-logo:hover {
+        background-position: left;
+      }
+      /* 导航栏文字 */
+      .white-nav span {
+        display: inline-block;
+        margin-left: 20px;
+      }
+      .white-nav span:hover {
+        color: orange;
+      }
+      /* 白色导航栏下拉框 */
+
+      [class$="list"] {
+        position: absolute;
+        width: 100%;
+        top: 100px;
+        left: 0px;
+        height: 0px;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      [class$="list"] div {
+        display: inline-block;
+        width: 205px;
+        height: 100%;
+        position: relative;
+      }
+
+      [class$="list"] div div {
+        margin-top: 35px;
+        width: 205px;
+        height: 110px;
+        border-right: 1px solid gray;
+      }
+
+      [class$="list"] div div img {
+        width: 160px;
+        height: 100%;
+      }
+
+      [class$="list"] div .xinghao,
+      [class$="list"] div .jiage {
+        font-size: 12px;
+        line-height: 40px;
+        display: block;
+        margin: auto;
+        margin-top: -20px;
+        color: black;
+      }
+
+      [class$="list"] div .jiage {
+        color: orange;
+      }
+      /* hover导航栏出现下拉效果 */
+      .xm:hover .xmlist,
+      .hm:hover .hmlist,
+      .ds:hover .dslist,
+      .bjb:hover .bjblist,
+      .lyq:hover .lyqlist,
+      .jd:hover .jdlist,
+      .znyj:hover .znyjlist {
+        height: 230px;
+        box-shadow: 0px 1px 5px 1px gray;
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ---最上方红色广告---- -->
+    <div class="top"></div>
+    <!-- ----最上方黑色导航栏-- -->
+    <div class="black-nav">
+      <span>小米商城<span>|</span></span>
+      <span>MIUI<span>|</span></span>
+      <span>IOT<span>|</span></span>
+      <span>云服务<span>|</span></span>
+      <span>金融<span>|</span></span>
+      <span>有品<span>|</span></span>
+      <span>小爱开放平台<span>|</span></span>
+      <span>企业团购<span>|</span></span>
+      <span>资质证照<span>|</span></span>
+      <span>协议规则<span>|</span></span>
+      <span>下载app<span>|</span></span>
+      <span>智能生活<span>|</span></span>
+      <span>Select Location</span>
+      <span class="denglu">登录<span>|</span></span>
+      <span>注册<span>|</span></span>
+      <span>消息通知</span>
+      <div class="pay">
+        购物车（0)
+        <div class="gouwuche">购物车中还没有商品，快来选购吧！</div>
+      </div>
+    </div>
+
+    <!-- ----白色导航栏---- -->
+    <div class="white-nav">
+      <div class="mi-logo"></div>
+      <span class="xm"
+        >小米手机
+        <div class="xmlist">
+          <div>
+            <div><img src="image-xiaomi/mi10zhizun.png" alt="" /></div>
+            <span class="xinghao">小米10至尊纪念版</span>
+            <span class="jiage">5299元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/mi10pro.png" alt="" /></div>
+            <span class="xinghao">小米10 PRO</span>
+            <span class="jiage">4999元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/mi10.png" alt="" /></div>
+            <span class="xinghao">小米10</span>
+            <span class="jiage">3799元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/mi10qinchun.png" alt="" /></div>
+            <span class="xinghao">小米10 青春版 5G</span>
+            <span class="jiage">1899元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/mixalpha.png" alt="" /></div>
+            <span class="xinghao">小米MIX Alpha</span>
+            <span class="jiage">19999元起</span>
+          </div>
+        </div>
+      </span>
+      <span class="hm"
+        >Redmi红米
+        <div class="hmlist">
+          <div>
+            <div><img src="image-xiaomi/k30zhizun.jpg" alt="" /></div>
+            <span class="xinghao">Redmi K30 Pro 系列</span>
+            <span class="jiage">1999元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/k30pro.jpg" alt="" /></div>
+            <span class="xinghao">Redmi K30 Pro 系列</span>
+            <span class="jiage">2999元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/k30.jpg" alt="" /></div>
+            <span class="xinghao">Redmi K30 系列</span>
+            <span class="jiage">1399元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/10X.png" alt="" /></div>
+            <span class="xinghao">Redmi 10X</span>
+            <span class="jiage">999元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/R8.png" alt="" /></div>
+            <span class="xinghao">Redmi Note 8</span>
+            <span class="jiage">899元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/R9.png" alt="" /></div>
+            <span class="xinghao">Reami 9</span>
+            <span class="jiage">799元起</span>
+          </div>
+        </div>
+      </span>
+      <span class="ds"
+        >电视
+        <div class="dslist">
+          <div>
+            <div><img src="image-xiaomi/zhizun.png" alt="" /></div>
+            <span class="xinghao">小米电视大师 82英寸至尊纪念版</span>
+            <span class="jiage">49999元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/82.png" alt="" /></div>
+            <span class="xinghao">小米电视大师 82英寸</span>
+            <span class="jiage">9999元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/toumin.jpg" alt="" /></div>
+            <span class="xinghao">小米透明电视</span>
+            <span class="jiage">49999元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/65.png" alt="" /></div>
+            <span class="xinghao">小米电视 大师 65英寸OLED</span>
+            <span class="jiage">12999元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/98.jpg" alt="" /></div>
+            <span class="xinghao">Redmi 智能电视 MAX 98"</span>
+            <span class="jiage">19999元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/60.png" alt="" /></div>
+            <span class="xinghao">小米电视4A 60英寸</span>
+            <span class="jiage">2399元</span>
+          </div>
+        </div>
+      </span>
+      <span class="bjb"
+        >笔记本
+        <div class="bjblist">
+          <div>
+            <div><img src="image-xiaomi/RG.png" alt="" /></div>
+            <span class="xinghao">Redmi G 游戏本</span>
+            <span class="jiage">&nbsp;</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/rb16.png" alt="" /></div>
+            <span class="xinghao">RedmiBook 16</span>
+            <span class="jiage">4699元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/rb14.png" alt="" /></div>
+            <span class="xinghao">RedmiBook 14 II</span>
+            <span class="jiage">4299元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/p2020.png" alt="" /></div>
+            <span class="xinghao">Pro 15.6" 2020款</span>
+            <span class="jiage">5999元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/rb13.png" alt="" /></div>
+            <span class="xinghao">RedmiBook Air 13</span>
+            <span class="jiage">4899元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/xianshiqi.png" alt="" /></div>
+            <span class="xinghao">显示器</span>
+            <span class="jiage">2199元</span>
+          </div>
+        </div>
+      </span>
+      <span class="jd"
+        >家电
+        <div class="jdlist">
+          <div>
+            <div><img src="image-xiaomi/ktc1.png" alt="" /></div>
+            <span class="xinghao">米家互联网空调C1（一级能效）</span>
+            <span class="jiage">2099元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/kt.png" alt="" /></div>
+            <span class="xinghao">米家互联网空调（一级能效）</span>
+            <span class="jiage">2099元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/xyj.jpg" alt="" /></div>
+            <span class="xinghao">Redmi全自动波轮洗衣机1A</span>
+            <span class="jiage">849元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/xhj.png" alt="" /></div>
+            <span class="xinghao">米家互联网洗烘一体机10kg</span>
+            <span class="jiage">2099元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/bx483.jpg" alt="" /></div>
+            <span class="xinghao">米家风冷对开门冰箱 483L</span>
+            <span class="jiage">2299元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/bx160.jpg" alt="" /></div>
+            <span class="xinghao">米家两门冰箱 160L</span>
+            <span class="jiage">899元</span>
+          </div>
+        </div>
+      </span>
+      <span class="lyq"
+        >路由器
+        <!-- <div class="lyqlist">
+          <div>
+            <div><img src="image-xiaomi/ax6.png" alt="" /></div>
+            <span class="xinghao">Redmi路由器 AX6</span>
+            <span class="jiage">399元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/ax5.png" alt="" /></div>
+            <span class="xinghao">Redmi路由器 AX5</span>
+            <span class="jiage">249元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/ax1800.png" alt="" /></div>
+            <span class="xinghao">小米路由器 AX1800</span>
+            <span class="jiage">329元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/ax3600.png" alt="" /></div>
+            <span class="xinghao">小米AIoT路由器AX3600</span>
+            <span class="jiage">599元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/rac2100.png" alt="" /></div>
+            <span class="xinghao">Redmi路由器AC2100</span>
+            <span class="jiage">169元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/ac2100.png" alt="" /></div>
+            <span class="xinghao">小米路由器AC2100</span>
+            <span class="jiage">229元</span>
+          </div>
+        </div> -->
+      </span>
+      <span class="znyj"
+        >智能硬件
+        <!-- <div class="znyjlist">
+          <div>
+            <div><img src="image-xiaomi/sxj.png" alt="" /></div>
+            <span class="xinghao">小米米家智能摄像机云台版</span>
+            <span class="jiage">189元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/xals.png" alt="" /></div>
+            <span class="xinghao">小米小爱老师</span>
+            <span class="jiage">499元起</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/znms.png" alt="" /></div>
+            <span class="xinghao">小米全自动智能门锁</span>
+            <span class="jiage">1799元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/cpyx8.png" alt="" /></div>
+            <span class="xinghao">Redmi小爱触屏音箱 8</span>
+            <span class="jiage">349元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/cpyx.png" alt="" /></div>
+            <span class="xinghao">小米小爱触屏音箱</span>
+            <span class="jiage">199元</span>
+          </div>
+          <div>
+            <div><img src="image-xiaomi/xayx.png" alt="" /></div>
+            <span class="xinghao">Redmi小爱音箱 Play</span>
+            <span class="jiage">79元起</span>
+          </div>
+        </div> -->
+      </span>
+      <span>服务</span>
+      <span>社区</span>
+    </div>
+  </body>
+</html>

@@ -14,9 +14,9 @@
         box-sizing: border-box;
         border: 10px solid rgb(156, 155, 155);
         position: relative;
-        border-radius: 100px;
+        border-radius: 999px;
         display: block;
-        transition: 1s;
+        transition: 0.6s;
       }
       span {
         display: inline-block;
@@ -27,10 +27,23 @@
         position: absolute;
         top: 5px;
         left: 10px;
-        box-shadow: 0 0 5px 1px grey;
+
         z-index: 10;
         background: white;
         transition: 1s;
+      }
+      div {
+        box-sizing: border-box;
+        width: 170px;
+        height: 170px;
+        border-radius: 85px;
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        box-shadow: 0 0 5px 1px grey;
+        background: white;
+        transition: 1.2s;
+        z-index: 5;
       }
       input:checked + label {
         border-color: rgb(130, 243, 108);
@@ -39,12 +52,18 @@
       input:checked + label span {
         margin-left: 190px;
       }
+      input:checked + label div {
+        margin-left: 190px;
+        zwidth: 100px;
+        xheight: 100px;
+      }
     </style>
   </head>
   <body>
     <input type="checkbox" id="yc" />
     <label for="yc">
       <span></span>
+      <div></div>
     </label>
   </body>
 </html>
