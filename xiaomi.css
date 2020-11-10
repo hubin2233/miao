@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  box-shadow: 0 0 0 0.5px red;
+}
+/* ----最上方黑色导航栏--------------------------------------------------------------------- */
+.top {
+  height: 120px;
+  background-image: url(image-xiaomi/top.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.black-nav {
+  position: relative;
+  height: 40px;
+  width: auto;
+  background-color: rgb(51, 51, 51);
+  font: 12px/40px "Helvetica Neue", "Helvetica,Arial", "Microsoft Yahei";
+  color: rgb(176, 176, 176);
+  padding-left: 60px;
+  xoverflow: hidden;
+}
+.black-nav span {
+  margin-left: 4px;
+}
+.black-nav span span {
+  margin-left: 4px;
+  font-weight: 100;
+}
+.black-nav .denglu {
+  margin-left: 239px;
+}
+.black-nav .pay {
+  background-image: url(image-xiaomi/gouwuche1.png);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 15px 10px;
+  display: inline-block;
+  width: 120px;
+  height: 100%;
+  box-sizing: border-box;
+  padding-right: 20px;
+  text-align: right;
+  margin-right: 60px;
+}
+.black-nav span:hover {
+  color: white;
+}
+.black-nav span:hover span {
+  color: rgb(176, 176, 176);
+}
+.pay:hover {
+  background-image: url(image-xiaomi/gouwuche2.png);
+  color: orange;
+  background-color: white;
+}
+.gouwuche {
+  overflow: hidden;
+  width: 320px;
+  height: 0px;
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  text-align: center;
+  color: black;
+  box-shadow: 0 0 5px 1px gray;
+}
+.pay:hover div {
+  display: block;
+  height: 100px;
+  line-height: 100px;
+  transition: all 0.5s;
+}
+
+/* ----白色导航栏 ------------------------------------------------------------------------------ */
+.white-nav {
+  height: 100px;
+  font-size: 16px;
+  position: relative;
+  line-height: 100px;
+  padding-left: 300px;
+}
+/* 左边小米logo */
+.mi-logo {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  top: 25px;
+  left: 60px;
+  background-image: url(image-xiaomi/logo-mijia.jpg);
+  background-repeat: no-repeat;
+  background-size: 110px 55px;
+  background-position: right;
+  transition: 0.3s;
+}
+.mi-logo:hover {
+  background-position: left;
+}
+/* 导航栏文字 */
+.white-nav span {
+  display: inline-block;
+  margin-left: 20px;
+}
+.white-nav span:hover {
+  color: orange;
+}
+/* 白色导航栏下拉框 */
+
+[class$="list"] {
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  left: 0px;
+  height: 0px;
+  text-align: center;
+  overflow: hidden;
+}
+
+[class$="list"] div {
+  display: inline-block;
+  width: 205px;
+  height: 100%;
+  position: relative;
+}
+
+[class$="list"] div div {
+  margin-top: 35px;
+  width: 205px;
+  height: 110px;
+  border-right: 1px solid gray;
+}
+
+[class$="list"] div div img {
+  width: 160px;
+  height: 100%;
+}
+
+[class$="list"] div .xinghao,
+[class$="list"] div .jiage {
+  font-size: 12px;
+  line-height: 40px;
+  display: block;
+  margin: auto;
+  margin-top: -20px;
+  color: black;
+}
+
+[class$="list"] div .jiage {
+  color: orange;
+}
+/* hover导航栏出现下拉效果 */
+.xm:hover .xmlist,
+.hm:hover .hmlist,
+.ds:hover .dslist,
+.bjb:hover .bjblist,
+.lyq:hover .lyqlist,
+.jd:hover .jdlist,
+.znyj:hover .znyjlist {
+  height: 230px;
+  box-shadow: 0px 1px 5px 1px gray;
+  transition: 0.5s;
+}
+/* ----首页轮播图---- */
+.lunbotu {
+  height: 460px;
+  width: 1230px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+.lunbotu ul {
+  width: 235px;
+  list-style: none;
+  position: absolute;
+  left: 0px;
+}
+.lunbotu-list li {
+  border: 1px solid gray;
+  height: 46px;
+}

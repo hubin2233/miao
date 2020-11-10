@@ -1,0 +1,141 @@
+* {
+  box-shadow: 0 0 0 0.5px red;
+}
+
+button {
+  position: relative;
+  display: block;
+  width: 180px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 3px;
+  background: rgb(183, 18, 18);
+  margin: auto;
+  margin-top: 200px;
+}
+[data-balloon-pos="up-left"]:hover::after {
+  position: absolute;
+  display: inline-block;
+  content: attr(aria-label);
+  background: black;
+  transform: translate(-125px, -30px);
+}
+[data-balloon-pos="up-left"]:hover::before {
+  content: "";
+  position: absolute;
+  border: 3px solid black;
+  transform: rotate(45deg);
+  top: -8px;
+  left: 5px;
+}
+[data-balloon-pos="up-right"]:hover::after {
+  position: absolute;
+  display: inline-block;
+  content: attr(aria-label);
+  background: black;
+  transform: translate(-13px, -30px);
+}
+[data-balloon-pos="up-right"]:hover::before {
+  content: "";
+  position: absolute;
+  border: 3px solid black;
+  transform: rotate(45deg);
+  top: -8px;
+  left: 125px;
+}
+[data-balloon-pos="down-right"]:hover::after {
+  position: absolute;
+  display: inline-block;
+  content: attr(aria-label);
+  background: black;
+  transform: translate(-13px, 30px);
+}
+[data-balloon-pos="down-right"]:hover::before {
+  content: "";
+  position: absolute;
+  border: 3px solid black;
+  transform: rotate(45deg);
+  top: 38px;
+  left: 125px;
+}
+[data-balloon-pos="down-left"]:hover::after {
+  position: absolute;
+  display: inline-block;
+  content: attr(aria-label);
+  background: black;
+  transform: translate(-125px, 30px);
+}
+[data-balloon-pos="down-left"]:hover::before {
+  content: "";
+  position: absolute;
+  border: 3px solid black;
+  transform: rotate(45deg);
+  top: 38px;
+  left: 5px;
+}
+
+[data-balloon-pos="up"]:hover::after {
+  position: absolute;
+  display: inline-block;
+  content: attr(aria-label);
+  background: black;
+  transform: translate(-70px, -30px);
+}
+[data-balloon-pos="up"]:hover::before {
+  content: "";
+  position: absolute;
+  border: 3px solid black;
+  transform: rotate(45deg);
+  top: -8px;
+  left: 85px;
+}
+[data-balloon-pos="down"]:hover::after {
+  position: absolute;
+  display: inline-block;
+  content: attr(aria-label);
+  background: black;
+  transform: translate(-70px, 30px);
+}
+[data-balloon-pos="down"]:hover::before {
+  content: "";
+  position: absolute;
+  border: 3px solid black;
+  transform: rotate(45deg);
+  top: 38px;
+  left: 85px;
+}
+
+[data-balloon-pos="left"]:hover::after {
+  position: absolute;
+  display: inline-block;
+  content: attr(aria-label);
+  background: black;
+  transform: translate(-200px, 0px);
+}
+[data-balloon-pos="left"]:hover::before {
+  content: "";
+  position: absolute;
+  border: 3px solid black;
+  transform: rotate(45deg);
+  top: 15px;
+  left: -12px;
+}
+[data-balloon-pos="right"]:hover::after {
+  position: absolute;
+  display: inline-block;
+  content: attr(aria-label);
+  background: black;
+  transform: translate(60px, 0px);
+}
+[data-balloon-pos="right"]:hover::before {
+  content: "";
+  position: absolute;
+  border: 3px solid black;
+  transform: rotate(45deg);
+  top: 15px;
+  left: 184px;
+}
