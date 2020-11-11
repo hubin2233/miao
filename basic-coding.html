@@ -18,7 +18,7 @@
   var a = Number(prompt("输入a"));
   var b = Number(prompt("输入b"));
   var c = Number(prompt("输入c"));
-  var d = Math.ceil((a + b) / c);
+  var d = Math.floor((a + b) / c);
   console.log(d);
 </script>
 
@@ -277,11 +277,11 @@
   var a = Number(prompt("input a"));
   var b = Number(prompt("input b"));
   if (a >= 60 && b >= 60) {
-    console.log(1);
-  } else if (a < 60 && b < 60) {
-    console.log(1);
-  } else {
     console.log(0);
+  } else if (a < 60 && b < 60) {
+    console.log(0);
+  } else {
+    console.log(1);
   }
 </script>
 
@@ -308,12 +308,12 @@
 </script>
 
 <script type="norun" id="ch0104/13">
-  var a = Number(prompt("input a"));
+  var x = Number(prompt("input x"));
   var y;
   if (x < 5) {
-    y = -a + 2.5;
+    y = -x + 2.5;
   } else if (x >= 10) {
-    y = a / 2 - 1.5;
+    y = x / 2 - 1.5;
   } else {
     y = 2 - 1.5 * (x - 3) * (x - 3);
   }
@@ -321,18 +321,49 @@
 </script>
 
 <script type="norun" id="ch0104/14">
-  var a = Number(prompt("input a"));
-  var b = Number(prompt("input b"));
+  var a = Number(prompt("重量"));
+  var b = Number(prompt("是否加急"));
+  var c;
+  var d;
+  if (a <= 1000) {
+    c = 8;
+  } else {
+    c = Math.ceil((a - 1000) / 500) * 4 + 8;
+  }
+  if ((b = "y")) {
+    d = 5;
+  } else {
+    d = 0;
+  }
+  var money = c + d;
+  console.log(money);
 </script>
 
 <script type="norun" id="ch0104/15">
   var a = Number(prompt("input a"));
   var b = Number(prompt("input b"));
+  var c = Number(prompt("input c"));
+  if (a > b && a > c) {
+    console.log(a);
+  } else if (b > a && b > c) {
+    console.log(b);
+  } else {
+    console.log(c);
+  }
 </script>
 
 <script type="norun" id="ch0104/16">
-  var a = Number(prompt("input a"));
-  var b = Number(prompt("input b"));
+  var a = Number(prompt(""));
+  var b = Number(prompt(""));
+  var c = Number(prompt(""));
+  var d = Math.sqrt(a * a + b * b);
+  var e = Math.sqrt(a * a + c * c);
+  var f = Math.sqrt(b * b + c * c);
+  if (d == c || e == b || f == a) {
+    console.log("yes");
+  } else {
+    console.log("no");
+  }
 </script>
 
 <script type="norun" id="ch0104/17">
@@ -349,19 +380,53 @@
 <script type="norun" id="ch0104/18">
   var a = Number(prompt("input a"));
   var b = Number(prompt("input b"));
+  if (a * a <= 1 && b * b <= 1) {
+    console.log("yes");
+  } else {
+    console.log("no");
+  }
 </script>
 
 <script type="norun" id="ch0104/19">
-  var a = Number(prompt("input a"));
-  var b = Number(prompt("input b"));
+  var a = Number(prompt("参数a"));
+  var b = Number(prompt("参数b"));
+  var c = +prompt("运算符");
+  var d;
+  if ((c = "+")) {
+    d = a + b;
+  } else if ((c = "-")) {
+    d = a - b;
+  } else if ((c = "*")) {
+    d = a * b;
+  } else if ((c = "/" && b != 0)) {
+    d = a / b;
+  } else if (c == "/" && b == 0) {
+    console.log("Divided by zero!");
+  } else {
+    console.log(" Invalid operator!");
+  }
+  console.log(d);
 </script>
 
 <script type="norun" id="ch0104/20">
   var a = Number(prompt("input a"));
   var b = Number(prompt("input b"));
+  var c = Number(prompt("input c"))
+  var d = b * b
+  var e = 4 * a *c
+  var x1 = (-b + Math.sqrt(d-e))/(2*a)
+  var x2 = (-b - Math.sqrt(d-e))/(2*a)
+  if (d = e) {
+    console.log("x1=x2="+x1)
+  }else if (d>e) {
+    console.log("x1="+x1+";x2="+x2)
+  }else {
+    console.log()
+  }
 </script>
 
 <script type="norun" id="ch0104/21">
-  var a = Number(prompt("input a"));
-  var b = Number(prompt("input b"));
+  var n = Number(prompt("input n"));
+  var a = 2 ** n
+  console.log(a)
 </script>
