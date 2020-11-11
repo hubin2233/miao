@@ -398,35 +398,34 @@
     d = a - b;
   } else if ((c = "*")) {
     d = a * b;
-  } else if ((c = "/" && b != 0)) {
-    d = a / b;
-  } else if (c == "/" && b == 0) {
-    console.log("Divided by zero!");
+  } else if ((c = "/" )) {
   } else {
     console.log(" Invalid operator!");
   }
   console.log(d);
 </script>
 
-<script type="norun" id="ch0104/20">
+<script xtype="norun" id="ch0104/20">
   var a = Number(prompt("input a"));
   var b = Number(prompt("input b"));
-  var c = Number(prompt("input c"))
-  var d = b * b
-  var e = 4 * a *c
-  var x1 = (-b + Math.sqrt(d-e))/(2*a)
-  var x2 = (-b - Math.sqrt(d-e))/(2*a)
-  if (d = e) {
-    console.log("x1=x2="+x1)
-  }else if (d>e) {
-    console.log("x1="+x1+";x2="+x2)
-  }else {
-    console.log()
+  var c = Number(prompt("input c"));
+  var d = b * b;
+  var e = 4 * a * c;
+  var x1 = (-b + Math.sqrt(d - e)) / (2 * a);
+  var x2 = (-b - Math.sqrt(d - e)) / (2 * a);
+  if ((d = e)) {
+    console.log("x1=x2=" + x1);
+  } else if (d > e) {
+    console.log("x1=" + x1 + ";x2=" + x2);
+  } else {
+    console.log();
   }
 </script>
 
 <script type="norun" id="ch0104/21">
-  var n = Number(prompt("input n"));
-  var a = 2 ** n
-  console.log(a)
+  var a = Number(prompt("多少个苹果"));
+  var b = Number(prompt("虫子多少小时吃掉一个苹果"));
+  var c = Number(prompt("经过多少小时"));
+  var d = a - Math.ceil(y / x);
+  console.log(d);
 </script>
