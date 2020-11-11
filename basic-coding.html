@@ -392,33 +392,40 @@
   var b = Number(prompt("参数b"));
   var c = +prompt("运算符");
   var d;
-  if ((c = "+")) {
+  if ((c == "+")) {
     d = a + b;
-  } else if ((c = "-")) {
+  } else if ((c == "-")) {
     d = a - b;
-  } else if ((c = "*")) {
+  } else if ((c == "*")) {
     d = a * b;
-  } else if ((c = "/" )) {
+  } else if ((c == "/" )) {
   } else {
     console.log(" Invalid operator!");
   }
   console.log(d);
 </script>
 
-<script xtype="norun" id="ch0104/20">
-  var a = Number(prompt("input a"));
-  var b = Number(prompt("input b"));
-  var c = Number(prompt("input c"));
-  var d = b * b;
-  var e = 4 * a * c;
-  var x1 = (-b + Math.sqrt(d - e)) / (2 * a);
-  var x2 = (-b - Math.sqrt(d - e)) / (2 * a);
-  if ((d = e)) {
+<script type="norun" id="ch0104/20">
+  var a = parseFloat(prompt());
+  var b = parseFloat(prompt());
+  var c = parseFloat(prompt());
+  var delta = b * b - 4 * a * c;
+  if (delta == 0) {
+    var x1 = (-b / a / 2).toFixed(5);
     console.log("x1=x2=" + x1);
-  } else if (d > e) {
-    console.log("x1=" + x1 + ";x2=" + x2);
+  } else if (delta < 0) {
+    var x1 = ((-b + Math.sqrt(-delta)) / a / 2).toFixed(5);
+    var x2 = ((-b - Math.sqrt(-delta)) / a / 2).toFixed(5);
+    var a1 = (-b / 2 / a).toFixed(5);
+    var b1 = (Math.sqrt(-delta) / a / 2).toFixed(5);
+    var c1 = (-Math.sqrt(-delta) / a / 2).toFixed(5);
+    console.log(
+      "x1=" + a1 + "+" + String(b1) + "i" + ";x2=" + a1 + String(c1) + "i"
+    );
   } else {
-    console.log();
+    var x1 = ((-b + Math.sqrt(delta)) / a / 2).toFixed(5);
+    var x2 = ((-b - Math.sqrt(delta)) / a / 2).toFixed(5);
+    console.log("x1=" + x1 + ";x2=" + x2);
   }
 </script>
 
@@ -428,4 +435,274 @@
   var c = Number(prompt("经过多少小时"));
   var d = a - Math.ceil(y / x);
   console.log(d);
+</script>
+
+<script type="norun" id="ch0105/01">
+  var a = Number(prompt("学生的总数"));
+  var sum = 0;
+  var i = 1;
+  while (i <= a) {
+    sum = sum + Number(prompt("该学生年龄"));
+    i++;
+  }
+  console.log((sum / a).toFixed(2));
+</script>
+
+<script type="norun" id="ch0105/02">
+  var rest;
+  var sum = 0;
+  var i = 1;
+  while (i <= 12) {
+    rest = Number(prompt("本月结余"));
+    sum = sum + rest;
+    i++;
+  }
+  console.log("$" + (sum / 12).toFixed(2));
+</script>
+
+<script type="norun" id="ch0105/03">
+  var n = Number(prompt("样本容量 n"));
+  var sum = 0;
+  var i = 1;
+  while (i <= n) {
+    var a = Number(prompt("样本数据"));
+    sum = sum + a;
+    i++;
+  }
+  console.log((sum / n).toFixed(4));
+</script>
+
+<script type="norun" id="ch0105/04">
+  var n = Number(prompt("多少个整数"));
+  var sum = 0;
+  var i = 1;
+  while (i <= n) {
+    var a = Number(prompt("数值"));
+    sum = sum + a;
+    i++;
+  }
+  console.log(sum + " " + (sum / n).toFixed(5));
+</script>
+
+<script type="norun" id="ch0105/05">
+  var n = Number(prompt("参加考试的人数"));
+  var max = 0;
+  var i = 1;
+  while (i <= n) {
+    var goat = Number(prompt("学生的分数"));
+    if (max < goat) {
+      max = goat;
+    }
+    i++;
+  }
+  console.log(max);
+</script>
+
+<script type="norun" id="ch0105/06">
+  var n = Number(prompt("序列数"));
+  var min = 1000;
+  var max = 1;
+  var i = 1;
+  while (i <= n) {
+    var a = Number(prompt("序列"));
+    if (max < a) {
+      max = a;
+    }
+    if (min > a) {
+      min = a;
+    }
+    i++;
+  }
+  console.log(max - min);
+</script>
+
+<script type="norun" id="ch0105/07">
+  var n = Number(prompt("天数"));
+  var gold = 0;
+  var silver = 0;
+  var bronze = 0;
+  var i = 1;
+  while (i <= n) {
+    gold = gold + Number(prompt(i + "天金牌"));
+    silver = silver + Number(prompt(i + "天银牌"));
+    bronze = bronze + Number(prompt(i + "天铜牌"));
+    i++;
+  }
+  var sum = gold + silver + bronze;
+  console, console.log(gold, silver, bronze, sum);
+</script>
+
+<script type="norun" id="ch0105/08">
+  var n = Number(prompt("几边形"));
+  var horn = (n - 2) * 180;
+  var i = 1;
+  while (i < n) {
+    var a = Number(prompt("已知内角度数"));
+    horn = horn - a;
+    i++;
+  }
+  console.log(horn);
+</script>
+
+<script type="norun" id="ch0105/09">
+  var m = Number(prompt("m"));
+  var n = Number(prompt("n"));
+  var sum = 0;
+  if (m % 2 == 0) {
+    m = m + 1;
+  }
+  while (m <= n) {
+    sum = sum + m;
+    m = m + 2;
+  }
+  console.log(sum);
+</script>
+
+<script type="norun" id="ch0105/10">
+  var m = Number(prompt("input m"));
+  var n = Number(prompt("input n"));
+  while (m % 17 != 0) {
+    m = m + 1;
+  }
+  while (n % 17 != 0) {
+    n = n - 1;
+  }
+  var sum = 0;
+  while (m <= n) {
+    sum = sum + m;
+    m = m + 17;
+  }
+  console.log(sum);
+</script>
+
+<script type="norun" id="ch0105/11">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/12">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/13">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/15">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/16">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/17">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/18">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/19">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/21">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/22">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/23">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/24">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/25">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/26">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/27">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/28">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/29">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/30">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/31">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/32">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/33">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/34">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/35">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/36">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/37">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/38">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/39">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/40">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/41">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/42">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/43">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/44">
+  var a = Number(prompt("input a"));
+</script>
+
+<script type="norun" id="ch0105/45">
+  var a = Number(prompt("input a"));
 </script>
