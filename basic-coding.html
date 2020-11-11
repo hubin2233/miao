@@ -34,8 +34,7 @@
   var a = Number(prompt("input a"));
   var b = Number(prompt("input b"));
   var c = (a / b).toFixed(9);
-  console
-  .log(c);
+  console.log(c);
 </script>
 
 <script type="norun" id="ch0103/06">
@@ -206,7 +205,15 @@
 </script>
 
 <script type="norun" id="ch0104/05">
-  var x = new Arr
+  var x = Number(prompt("输入x"));
+  var y = Number(prompt("输入y"));
+  if (x == y) {
+    console.log("=");
+  } else if (x > y) {
+    console.log(">");
+  } else {
+    console.log("<");
+  }
 </script>
 
 <script type="norun" id="ch0104/06">
@@ -220,8 +227,15 @@
 </script>
 
 <script type="norun" id="ch0104/07">
-  var a = Number(prompt("input a"));
-  var b = Number(prompt("input b"));
+  var a = Number(prompt("幸运"));
+  var b = Number(prompt("鼓励"));
+  if (a >= 10) {
+    console.log("1");
+  } else if (b >= 20) {
+    console.log("1");
+  } else {
+    console.log("0");
+  }
 </script>
 
 <script type="norun" id="ch0104/08">
@@ -262,6 +276,13 @@
 <script type="norun" id="ch0104/10">
   var a = Number(prompt("input a"));
   var b = Number(prompt("input b"));
+  if (a >= 60 && b >= 60) {
+    console.log(1);
+  } else if (a < 60 && b < 60) {
+    console.log(1);
+  } else {
+    console.log(0);
+  }
 </script>
 
 <script type="norun" id="ch0104/11">
