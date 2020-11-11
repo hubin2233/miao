@@ -18,7 +18,7 @@
   var a = Number(prompt("输入a"));
   var b = Number(prompt("输入b"));
   var c = Number(prompt("输入c"));
-  var d = (a + b) / c;
+  var d = Math.ceil((a + b) / c);
   console.log(d);
 </script>
 
@@ -34,7 +34,8 @@
   var a = Number(prompt("input a"));
   var b = Number(prompt("input b"));
   var c = (a / b).toFixed(9);
-  console.log(c);
+  console
+  .log(c);
 </script>
 
 <script type="norun" id="ch0103/06">
@@ -91,6 +92,11 @@
 
 <script type="norun" id="ch0103/13">
   var a = String(prompt("input a"));
+  var b = a % 10;
+  var c = ((a - b) % 100) / 101111111;
+  var d = (a - c * 10 - b) / 100;
+  var e = "" + b + c + d;
+  console.log(e);
 </script>
 
 <script type="norun" id="ch0103/14">
@@ -141,6 +147,8 @@
 <script type="norun" id="ch0103/19">
   var a = Number(prompt("input a"));
   var b = Number(prompt("input b"));
+  var c = a * b;
+  console.log(c);
 </script>
 
 <script type="norun" id="ch0103/20">
@@ -181,9 +189,9 @@
 <script type="norun" id="ch0104/03">
   var a = Number(prompt("input a"));
   if (a % 2 == 0) {
-    console.log("odd");
-  } else {
     console.log("even");
+  } else {
+    console.log("odd");
   }
 </script>
 
@@ -220,7 +228,7 @@
   var a = Number(prompt("input a"));
   var b = a % 3;
   var c = a % 5;
-  if ((b == 0, c == 0)) {
+  if ((b == 0 && c == 0)) {
     console.log("YES");
   } else {
     console.log("NO");
@@ -232,16 +240,22 @@
   var b = a % 3;
   var c = a % 5;
   var d = a % 7;
-  if ((b == 0, c == 0, d == 0)) {
+  if ((b == 0 && c == 0 && d == 0)) {
     console.log("3 5 7");
-  } else if ((b == 0, c == 0, d != 0)) {
+  } else if ((b == 0 && c == 0)) {
     console.log("3 5");
-  } else if ((b == 0, c !== 0, d == 0)) {
+  } else if ((b == 0 && d == 0)) {
     console.log("3 7");
-  } else if ((b != 0, c == 0, d == 0)) {
+  } else if ((c == 0 && d == 0)) {
     console.log("5 7");
-  } else if ((b != 0, c != 0, d != 0)) {
-    console.log("n");
+  } else if (b ==0) {
+    console.log("3");
+  } else if (c == 0){
+    console,log("5")
+  } else if (d == 0){
+    console.log("7")
+  }else{
+    console.log("n")
   }
 </script>
 
@@ -300,7 +314,7 @@
   var b = Number(prompt("input b"));
 </script>
 
-<script xtype="norun" id="ch0104/17">
+<script type="norun" id="ch0104/17">
   var a = Number(prompt("input a"));
   if (a % 400 == 0) {
     console.log("Y");
