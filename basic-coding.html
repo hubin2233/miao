@@ -673,8 +673,51 @@
   console.log(a);
 </script>
 
-<script xtype="norun" id="ch0105/18">
-  var a = Number(prompt("input a"));
+<script type="norun" id="ch0105/18">
+  var n = Number(prompt("input n"));
+  var sumx = Number(prompt("鸡尾酒疗法总病例"));
+  var workx = Number(prompt("鸡尾酒疗法有效病例"));
+  var x = workx / sumx;
+  var i = 1;
+  while (i < n) {
+    var sumy = Number(prompt("新疗法有效病例"));
+    var worky = Number(prompt("新疗法有效病例"));
+    var y = worky / sumy;
+    if (x - y == 0.05) {
+      console.log("same");
+    } else if (x - y > 0.05) {
+      console.log("better");
+    } else {
+      console.log("worse");
+    }
+    i++
+  }
+</script>
+
+<script type="norun" id="ch0105/19">
+  var n = Number(prompt("input n"));
+  var i = 1;
+  var t = 0;
+  while (i <= n) {
+    var x = Number(prompt("坐标x"));
+    var y = Number(prompt("坐标y"));
+    var num = Number(prompt("人数"));
+    t = t + (2 * Math.sqrt(x * x + y * y)) / 50 + 1.5 * num;
+    i++
+  }
+  console.log(Math.ceil(t));
+</script>
+
+<script type="norun" id="ch0105/20">
+  var h = Number(prompt("input h"));
+  var s = 0;
+  var i = 1;
+  while (i <= 10) {
+    h = h * 0.5;
+    s = s + 3 * h;
+    i++;
+  }
+  console.log(s.toFixed(5), h.toFixed(5));
 </script>
 
 <script type="norun" id="ch0105/21">
@@ -682,14 +725,6 @@
 </script>
 
 <script type="norun" id="ch0105/22">
-  var a = Number(prompt("input a"));
-</script>
-
-<script type="norun" id="ch0105/23">
-  var a = Number(prompt("input a"));
-</script>
-
-<script type="norun" id="ch0105/24">
   var a = Number(prompt("input a"));
 </script>
 
