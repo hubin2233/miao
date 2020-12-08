@@ -43,6 +43,7 @@ var hubin2233 = function(){
     return  result
   }
 
+
   // 将 array 中的所有元素转换为由 separator 分隔的字符串。
   // 参数：array (Array): 要转换的数组。
   //       [separator=','] (string): 分隔元素。
@@ -238,5 +239,6 @@ var hubin2233 = function(){
     max,
     min,
     sum,
+    difference,
   }
 }()
