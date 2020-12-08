@@ -31,7 +31,7 @@ var hubin2233 = function(){
   function join(array,separator=","){
     var result =  ""
     for(var i = 0;i<array.length-1;i++){
-        result += array[i] + separator +""
+        result += array[i]+ ""+ separator 
     }
     result+= array[i] + ""
     return result
@@ -89,8 +89,38 @@ var hubin2233 = function(){
   //      [predicate=_.identity] (Array|Function|Object|string): 这个函数会在每一次迭代调用。
   //      [fromIndex=0] (number): The index to search from.
   function findIndex(array,predicate=_.identity,fromIndex=9){
-
+    var
   }
+  // 减少一级array嵌套深度。
+  // 参数：array (Array): 需要减少嵌套层级的数组。
+  function flatten(array){
+    var result = []
+    for(var i =0 ;i<array.length;i++){
+      if(array[i][j]){
+        for(var j = 0;j<array[i].length;j++){
+          result.push(array[i][j])
+        }
+      }else{
+        result.push(array[i])
+      }
+    }
+    return result
+  }
+  // 将array递归为一维数组。
+  // 参数：array (Array): 需要处理的数组。
+  function flattenDeep(array){
+    var result = []
+    for(var i =0 ;i<array.length;i++){
+      if(array[i][0]){
+        flattenDeep(result)
+      }else{
+        result.push(array[i])
+      }
+    }
+    return result
+  }
+
+
 
   //--------------------调用以返回结果----------------------
   return {
