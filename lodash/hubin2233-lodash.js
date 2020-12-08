@@ -94,7 +94,7 @@ var hubin2233 = function(){
   function flatten(array){
     var result = []
     for(var i =0 ;i<array.length;i++){
-      if(array[i][j]){
+      if(array[i][0]){
         for(var j = 0;j<array[i].length;j++){
           result.push(array[i][j])
         }
