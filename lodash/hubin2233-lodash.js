@@ -89,6 +89,12 @@ var hubin2233 = function(){
   //      [predicate=_.identity] (Array|Function|Object|string): 这个函数会在每一次迭代调用。
   //      [fromIndex=0] (number): The index to search from.
 
+
+
+
+
+
+
   // 减少一级array嵌套深度。
   // 参数：array (Array): 需要减少嵌套层级的数组。
   function flatten(array){
@@ -116,6 +122,85 @@ var hubin2233 = function(){
       }
     }
   }
+  // 根据 depth 递归减少 array 的嵌套层级
+  // 参数：array (Array): 需要减少嵌套层级的数组。
+  //      [depth=1] (number):最多减少的嵌套层级数。
+
+  // 反转array，使得第一个元素变为最后一个元素，
+  // 第二个元素变为倒数第二个元素，依次类推。
+  // 参数：array (Array): 要修改的数组。
+  function reverse(array){
+    var result =[]
+    for(var i = array.length-1;i>0;i--){
+      result.push(array[i])
+    }
+    return result
+  }
+  // 使用二进制的方式检索来决定 value值 应该插入到数组中 
+  // 尽可能小的索引位置，以保证array的排序
+  // 参数：array (Array): 要检查的排序数组。
+  //       value (*): 要评估的值。
+  function sortedIndex(array,value){
+    for(var i = 0;i<array.length;i++){
+      if(array[i]>=value){
+        return i
+      }
+    }
+  }
+  // 转换 value 为一个数组
+  // 参数：value (*): 要转换的值
+  function toArray(value){
+    var result = []
+    if(value!==Number){
+      for(var i = 0;i<value.length;i++){
+        result.push(Number(value[i]))
+      }
+    }
+    return result
+  }
+  // 计算 array 中的最大值。 如果 array 是 空的或者假值将会返回 undefined。
+  // 参数：array (Array): 要迭代的数组。
+  function max(array){
+    var m = 0
+    if(array[i]){
+      for(var i = 0;i<array.length;i++){
+        if(m<array[i]){
+          m=array[i]
+        }
+      }
+      return m
+    }else{
+      return undefined
+    }
+  }
+  // 计算 array 中的最小值。 如果 array 是 空的或者假值将会返回 undefined。
+  // 参数：array (Array): 要迭代的数组。
+  function min(array){
+    var m = 0
+    if(array[i]){
+      for(var i = 0;i<array.length;i++){
+        if(m>array[i]){
+          m=array[i]
+        }
+      }
+      return m
+    }else{
+      return undefined
+    }
+  }
+  // 计算 array 中值的总和
+  // 参数：array (Array): 要迭代的数组。
+  function sum(array){
+    var s = 0
+    for(var i = 0;i<array.length;i++){
+      s+=array[i]
+    }
+    return s
+  }
+
+
+
+
   //--------------------调用以返回结果----------------------
   return {
     compact,
@@ -128,5 +213,9 @@ var hubin2233 = function(){
     fill,
     flatten,
     flattenDeep,
+    reverse,
+    sortedIndex,
+    toArray,
+    max,
   }
 }()
