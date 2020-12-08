@@ -131,7 +131,7 @@ var hubin2233 = function(){
   // 参数：array (Array): 要修改的数组。
   function reverse(array){
     var result =[]
-    for(var i = array.length-1;i>0;i--){
+    for(var i = array.length-1;i>=0;i--){
       result.push(array[i])
     }
     return result
@@ -162,7 +162,7 @@ var hubin2233 = function(){
   // 参数：array (Array): 要迭代的数组。
   function max(array){
     var m = 0
-    if(array[i]){
+    if(array[]!=null){
       for(var i = 0;i<array.length;i++){
         if(m<array[i]){
           m=array[i]
@@ -177,7 +177,7 @@ var hubin2233 = function(){
   // 参数：array (Array): 要迭代的数组。
   function min(array){
     var m = 0
-    if(array[i]){
+    if(array[]!=null){
       for(var i = 0;i<array.length;i++){
         if(m>array[i]){
           m=array[i]
@@ -217,5 +217,7 @@ var hubin2233 = function(){
     sortedIndex,
     toArray,
     max,
+    min,
+    sum,
   }
 }()
