@@ -1,7 +1,5 @@
 
 var hubin2233 = function(){
-
-
   // 将数组（array）拆分成多个 size 长度的区块，并将这些区块组成一个新数组。 
   // 如果array 无法被分割成全部等长的区块，那么最后剩余的元素将组成一个区块。
   // 参数：array（Array）需要处理的数组
@@ -36,14 +34,12 @@ var hubin2233 = function(){
       result.push(array[i])
       for(var j = 0;j<values.length;j++){
         if(values[j]=array[i]){
-          result = result.pop()
+          result.pop()
         }
       }
     }
     return  result
   }
-
-
   // 将 array 中的所有元素转换为由 separator 分隔的字符串。
   // 参数：array (Array): 要转换的数组。
   //       [separator=','] (string): 分隔元素。
@@ -72,6 +68,17 @@ var hubin2233 = function(){
     }
     return -1
   }
+  // 获取数组array中除了最后一个元素之外的所有元素
+  // （愚人码头注：去除数组array中的最后一个元素）。
+  // 参数：array (Array): 要查询的数组。
+  function initaial(array){
+    var result =[]
+    for(var i = 0;i<array.length-1;i++){
+      result.push(array[i])
+    }
+    return result
+  }
+
   // 创建一个切片数组，去除array前面的n个元素。（n默认值为1。）
   // 参数：array (Array): 要查询的数组。
   //       [n=1] (number): 要去除的元素个数。
@@ -154,6 +161,19 @@ var hubin2233 = function(){
       result.push(array[i])
     }
     return result
+  }
+    //使用 SameValueZero 等值比较，返回首次 value 在数组array中被找到的 索引值，
+  //  如果 fromIndex 为负值，将从数组array尾端索引进行匹配。
+  // 参数：array (Array): 需要查找的数组。
+  //     value (*): 需要查找的值。
+  //     [fromIndex=0] (number): 开始查询的位置。
+  function indexOf(array,value,fromIndex=0){
+    for(var i = fromIndex;i<array.length;i++){
+      if (array[i]==value) {
+        return i
+      }
+    }
+    return -1
   }
   // 使用二进制的方式检索来决定 value值 应该插入到数组中 
   // 尽可能小的索引位置，以保证array的排序
@@ -240,5 +260,7 @@ var hubin2233 = function(){
     min,
     sum,
     difference,
+    initaial,
+    indexOf,
   }
 }()
