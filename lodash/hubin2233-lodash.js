@@ -88,8 +88,7 @@ var hubin2233 = function(){
   // 参数：array (Array): 要搜索的数组。
   //      [predicate=_.identity] (Array|Function|Object|string): 这个函数会在每一次迭代调用。
   //      [fromIndex=0] (number): The index to search from.
-  function findIndex(array,predicate=_.identity,fromIndex=9){
-  }
+
   // 减少一级array嵌套深度。
   // 参数：array (Array): 需要减少嵌套层级的数组。
   function flatten(array){
