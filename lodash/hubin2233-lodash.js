@@ -30,9 +30,10 @@ var hubin2233 = function(){
   //       [separator=','] (string): 分隔元素。
   function join(array,separator=","){
     var result =  ""
-    for(var i = 1;i<array.length-1;i++){
-        result = result + array[i] + separator +""
+    for(var i = 0;i<array.length-1;i++){
+        result += array[i] + separator +""
     }
+    result+= array[i] + ""
     return result
   }
   // 获取array中的最后一个元素
