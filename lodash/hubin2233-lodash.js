@@ -162,7 +162,7 @@ var hubin2233 = function(){
   // 参数：array (Array): 要迭代的数组。
   function max(array){
     var m = 0
-    if(array[]!=null){
+    if(array!=null){
       for(var i = 0;i<array.length;i++){
         if(m<array[i]){
           m=array[i]
@@ -177,7 +177,7 @@ var hubin2233 = function(){
   // 参数：array (Array): 要迭代的数组。
   function min(array){
     var m = 0
-    if(array[]!=null){
+    if(array!=null){
       for(var i = 0;i<array.length;i++){
         if(m>array[i]){
           m=array[i]
