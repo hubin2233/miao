@@ -25,6 +25,24 @@ var hubin2233 = function(){
     }
     return result 
   }
+  // 创建一个具有唯一array值的数组，每个值不包含在其他给定的数组中。
+  // （愚人码头注：即创建一个新数组，这个数组中的值，为第一个数字（array 参数）排除了给定数组中的值。）
+  // 该方法使用 SameValueZero做相等比较。结果值的顺序是由第一个数组中的顺序确定。
+  // 参数：array (Array): 要检查的数组。
+  //       [values] (...Array): 排除的值。
+  function difference(array,values){
+    var result = []
+    for(var i = 0;i<array.length;i++){
+      result.push(array[i])
+      for(var j = 0;j<values.length;j++){
+        if(values[j]=array[i]){
+          result = result.pop()
+        }
+      }
+    }
+    return  result
+  }
+
   // 将 array 中的所有元素转换为由 separator 分隔的字符串。
   // 参数：array (Array): 要转换的数组。
   //       [separator=','] (string): 分隔元素。
@@ -197,6 +215,7 @@ var hubin2233 = function(){
     }
     return s
   }
+
 
 
 
