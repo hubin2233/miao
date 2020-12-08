@@ -117,11 +117,7 @@ var hubin2233 = function(){
         result.push(array[i])
       }
     }
-    return result
   }
-
-
-
   //--------------------调用以返回结果----------------------
   return {
     compact,
@@ -132,6 +128,7 @@ var hubin2233 = function(){
     drop,
     dropRight,
     fill,
-
+    flatten,
+    flattenDeep,
   }
 }()
