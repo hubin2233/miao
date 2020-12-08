@@ -30,8 +30,8 @@ var hubin2233 = function(){
   //       [separator=','] (string): 分隔元素。
   function join(array,separator=","){
     var result =  ""
-    for(var i = 1;i<array.length;i++){
-        result += array[i]+ separator
+    for(var i = 1;i<array.length-1;i++){
+        result = result + array[i] + separator +""
     }
     return result
   }
@@ -45,14 +45,51 @@ var hubin2233 = function(){
   //       value (*): 要搜索的值。
   //       [fromIndex=array.length-1] (number): 开始搜索的索引值。
   function lastIndexOf(array,value,fromIndex=array.length-1){
-    for(var i = array.length-1;i>0;i--){
+    for(var i = fromIndex;i>0;i--){
       if(array[i]==value){
         return i
       }
     }
     return -1
   }
+  // 创建一个切片数组，去除array前面的n个元素。（n默认值为1。）
+  // 参数：array (Array): 要查询的数组。
+  //       [n=1] (number): 要去除的元素个数。
+  function drop(array,n=1){
+    var result = []
+    for(var i = n;i<array.length;i++){
+      result.push(array[i])
+    }
+    return result
+  }
+  // 创建一个切片数组，去除array尾部的n个元素。（n默认值为1。）
+  // 参数：array (Array): 要查询的数组。
+  //       [n=1] (number): 要去除的元素个数。
+  function dropRight(array,n=1){
+    var result = []
+    for(var i = 0;i<array.length-n;i++){
+      result.push(array[i])
+    }
+    return result
+  }
+  // 使用 value 值来填充（替换） array，从start位置开始, 到end位置结束（但不包含end位置）。
+  // 参数：array (Array): 要填充改变的数组。
+  //       value (*): 填充给 array 的值。
+  //       [start=0] (number): 开始位置（默认0）。
+  //       [end=array.length] (number):结束位置（默认array.length）。
+  function fill(array,value,start=0,end=array.length){
+    for(var i = start;i<end;i++){
+      array[i]=value
+    }
+    return array
+  }
+  // 该方法类似_.find，区别是该方法返回第一个通过 predicate 判断为真值的元素的索引值（index），而不是元素本身。
+  // 参数：array (Array): 要搜索的数组。
+  //      [predicate=_.identity] (Array|Function|Object|string): 这个函数会在每一次迭代调用。
+  //      [fromIndex=0] (number): The index to search from.
+  function findIndex(array,predicate=_.identity,fromIndex=9){
 
+  }
 
   //--------------------调用以返回结果----------------------
   return {
@@ -61,5 +98,9 @@ var hubin2233 = function(){
     join,
     last,
     lastIndexOf,
+    drop,
+    dropRight,
+    fill,
+
   }
 }()
