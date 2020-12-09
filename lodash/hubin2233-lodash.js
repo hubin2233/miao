@@ -23,6 +23,16 @@ var hubin2233 = function(){
     }
     return result 
   }
+  // 创建一个新数组，将array与任何数组 或 值连接在一起。
+  // 参数：array (Array): 被连接的数组。
+  //     [values] (...*): 连接的值。
+  function concat(array,...values){
+    var result = []
+    for(var i = 0;i<values.length;i++){
+      result.push(values[i])
+    }
+    return result
+  }
   // 创建一个具有唯一array值的数组，每个值不包含在其他给定的数组中。
   // （愚人码头注：即创建一个新数组，这个数组中的值，为第一个数字（array 参数）排除了给定数组中的值。）
   // 该方法使用 SameValueZero做相等比较。结果值的顺序是由第一个数组中的顺序确定。
@@ -33,7 +43,7 @@ var hubin2233 = function(){
     for(var i = 0;i<array.length;i++){
       result.push(array[i])
       for(var j = 0;j<values.length;j++){
-        if(values[j]=array[i]){
+        if(values[j]==array[i]){
           result.pop()
         }
       }
