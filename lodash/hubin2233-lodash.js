@@ -39,56 +39,32 @@ var hubin2233 = function(){
   // 参数：array (Array): 要检查的数组。
   //       [values] (...Array): 排除的值。
   function difference(array,values){
-    var result = []
-    for(var i = 0;i<array.length;i++){
-      result.push(array[i])
-      for(var j = 0;j<values.length;j++){
-        if(values[j]==array[i]){
-          result.pop()
-        }
+    let grounp = concat([], ...args);
+    let res = [];
+    for (let i = 0; i < ary.length; i++) {
+      if (grounp.indexOf(ary[i]) == -1) {
+          res.push(ary[i]);
       }
     }
-    return  result
+    return res;
   }
-  // 将 array 中的所有元素转换为由 separator 分隔的字符串。
-  // 参数：array (Array): 要转换的数组。
-  //       [separator=','] (string): 分隔元素。
-  function join(array,separator=","){
-    var result =  ""
-    for(var i = 0;i<array.length-1;i++){
-        result += array[i]+ ""+ separator 
-    }
-    result+= array[i] + ""
-    return result
-  }
-  // 获取array中的最后一个元素
-  // 参数：array (Array): 要检索的数组。
-  function last(array){
-    return array[array.length-1]
-  }
-  // 这个方法类似 _.indexOf ，区别是它是从右到左遍历array的元素。
-  // 参数：array (Array): 要搜索的数组。
-  //       value (*): 要搜索的值。
-  //       [fromIndex=array.length-1] (number): 开始搜索的索引值。
-  function lastIndexOf(array,value,fromIndex=array.length-1){
-    for(var i = fromIndex;i>0;i--){
-      if(array[i]==value){
-        return i
-      }
-    }
-    return -1
-  }
-  // 获取数组array中除了最后一个元素之外的所有元素
-  // （愚人码头注：去除数组array中的最后一个元素）。
-  // 参数：array (Array): 要查询的数组。
-  function initaial(array){
-    var result =[]
-    for(var i = 0;i<array.length-1;i++){
-      result.push(array[i])
-    }
-    return result
-  }
+  // 这个方法类似_.difference ，除了它接受一个 iteratee （注：迭代器）， 
+  // 调用array 和 values 中的每个元素以产生比较的标准。 结果值是从第一数组中选择。
+  // iteratee 会调用一个参数：(value)。（注：首先使用迭代器分别迭代array 和 values中的每个元素，返回的值作为比较值）。
+  // 参数：array (Array): 要检查的数组。
+  //       [values] (...Array): 排除的值。
+  //       [iteratee=_.identity] (Array|Function|Object|string): iteratee 调用每个元素。
+  function differenceBy(array){
 
+  }
+  // 这个方法类似_.difference ，除了它接受一个 comparator （注：比较器），它调用比较array，values中的元素。
+  // 结果值是从第一数组中选择。comparator 调用参数有两个：(arrVal, othVal)。
+  // 参数：array (Array): 要检查的数组。
+  //       [values] (...Array): 排除的值。
+  //       [comparator] (Function): comparator 调用每个元素。
+  function differenceWith(array){
+
+  }
   // 创建一个切片数组，去除array前面的n个元素。（n默认值为1。）
   // 参数：array (Array): 要查询的数组。
   //       [n=1] (number): 要去除的元素个数。
@@ -99,7 +75,7 @@ var hubin2233 = function(){
     }
     return result
   }
-  // 创建一个切片数组，去除array尾部的n个元素。（n默认值为1。）
+    // 创建一个切片数组，去除array尾部的n个元素。（n默认值为1。）
   // 参数：array (Array): 要查询的数组。
   //       [n=1] (number): 要去除的元素个数。
   function dropRight(array,n=1){
@@ -108,6 +84,22 @@ var hubin2233 = function(){
       result.push(array[i])
     }
     return result
+  }
+  // 这个方法类似_.difference ，除了它接受一个 comparator （注：比较器），
+  // 它调用比较array，values中的元素。 结果值是从第一数组中选择。
+  // comparator 调用参数有两个：(arrVal, othVal)。
+  // 参数：array (Array): 要检查的数组。
+  //       [values] (...Array): 排除的值。
+  //       [comparator] (Function): comparator 调用每个元素。
+  function dropRightWhile(array){
+
+  }
+  // 创建一个切片数组，去除array中从起点开始到 predicate 返回假值结束部分。
+  // predicate 会传入3个参数： (value, index, array)。
+  // 参数：array (Array): 要查询的数组。
+  //       [predicate=_.identity] (Function): 这个函数会在每一次迭代调用。
+  function dropWhile(array){
+
   }
   // 使用 value 值来填充（替换） array，从start位置开始, 到end位置结束（但不包含end位置）。
   // 参数：array (Array): 要填充改变的数组。
@@ -124,13 +116,16 @@ var hubin2233 = function(){
   // 参数：array (Array): 要搜索的数组。
   //      [predicate=_.identity] (Array|Function|Object|string): 这个函数会在每一次迭代调用。
   //      [fromIndex=0] (number): The index to search from.
+  function findIndex(array){
 
+  }
+  // 这个方式类似_.findIndex， 区别是它是从右到左的迭代集合array中的元素。
+  // 参数：array (Array): 要搜索的数组。
+  //       [predicate=_.identity] (Array|Function|Object|string): 这个函数会在每一次迭代调用。
+  //       [fromIndex=array.length-1] (number): The index to search from.
+  function findLastIndex(array){
 
-
-
-
-
-
+  }
   // 减少一级array嵌套深度。
   // 参数：array (Array): 需要减少嵌套层级的数组。
   function flatten(array){
@@ -158,9 +153,52 @@ var hubin2233 = function(){
       }
     }
   }
-  // 根据 depth 递归减少 array 的嵌套层级
-  // 参数：array (Array): 需要减少嵌套层级的数组。
-  //      [depth=1] (number):最多减少的嵌套层级数。
+  // 与_.toPairs正好相反；这个方法返回一个由键值对pairs构成的对象。
+  // 参数：pairs (Array): 键值对pairs。
+  function fromPairs(array){
+
+  }
+
+  // 将 array 中的所有元素转换为由 separator 分隔的字符串。
+  // 参数：array (Array): 要转换的数组。
+  //       [separator=','] (string): 分隔元素。
+  function join(array,separator=","){
+    var result =  ""
+    for(var i = 0;i<array.length-1;i++){
+        result += array[i]+ ""+ separator 
+    }
+    result+= array[i] + ""
+    return result
+  }
+  // 获取数组 array 的第一个元素。
+  // 参数：array (Array): 要查询的数组。
+  // 获取array中的最后一个元素
+  // 参数：array (Array): 要检索的数组。
+  function last(array){
+    return array[array.length-1]
+  }
+  // 这个方法类似 _.indexOf ，区别是它是从右到左遍历array的元素。
+  // 参数：array (Array): 要搜索的数组。
+  //       value (*): 要搜索的值。
+  //       [fromIndex=array.length-1] (number): 开始搜索的索引值。
+  function lastIndexOf(array,value,fromIndex=array.length-1){
+    for(var i = fromIndex;i>0;i--){
+      if(array[i]==value){
+        return i
+      }
+    }
+    return -1
+  }
+  // 获取数组array中除了最后一个元素之外的所有元素
+  // （愚人码头注：去除数组array中的最后一个元素）。
+  // 参数：array (Array): 要查询的数组。
+  function initaial(array){
+    var result =[]
+    for(var i = 0;i<array.length-1;i++){
+      result.push(array[i])
+    }
+    return result
+  }
 
   // 反转array，使得第一个元素变为最后一个元素，
   // 第二个元素变为倒数第二个元素，依次类推。
