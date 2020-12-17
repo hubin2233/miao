@@ -38,15 +38,15 @@ var hubin2233 = function(){
   // 该方法使用 SameValueZero做相等比较。结果值的顺序是由第一个数组中的顺序确定。
   // 参数：array (Array): 要检查的数组。
   //       [values] (...Array): 排除的值。
-  function difference(array,values){
-    let grounp = concat([], ...args);
-    let res = [];
-    for (let i = 0; i < ary.length; i++) {
-        if (grounp.indexOf(ary[i]) == -1) {
-            res.push(ary[i]);
+  function difference(array,...values){
+    var nums = concat([], ...values);
+    var result = [];
+    for (var i = 0; i < array.length; i++) {
+        if (nums.indexOf(array[i]) == -1) {
+            result.push(array[i]);
         }
     }
-    return res;
+    return result;
   }
   // 这个方法类似_.difference ，除了它接受一个 iteratee （注：迭代器）， 
   // 调用array 和 values 中的每个元素以产生比较的标准。 结果值是从第一数组中选择。
