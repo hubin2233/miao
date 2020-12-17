@@ -42,9 +42,9 @@ var hubin2233 = function(){
     let grounp = concat([], ...args);
     let res = [];
     for (let i = 0; i < ary.length; i++) {
-      if (grounp.indexOf(ary[i]) == -1) {
-          res.push(ary[i]);
-      }
+        if (grounp.indexOf(ary[i]) == -1) {
+            res.push(ary[i]);
+        }
     }
     return res;
   }
@@ -158,6 +158,55 @@ var hubin2233 = function(){
   function fromPairs(array){
 
   }
+  // 获取数组 array 的第一个元素
+  // 参数：array (Array): 要查询的数组。
+  function head(array){
+    var result = array[0]
+    return result
+  }
+     //使用 SameValueZero 等值比较，返回首次 value 在数组array中被找到的 索引值，
+  //  如果 fromIndex 为负值，将从数组array尾端索引进行匹配。
+  // 参数：array (Array): 需要查找的数组。
+  //     value (*): 需要查找的值。
+  //     [fromIndex=0] (number): 开始查询的位置。
+  function indexOf(array,value,fromIndex=0){
+    for(var i = fromIndex;i<array.length;i++){
+      if (array[i]==value) {
+        return i
+      }
+    }
+    return -1
+  }
+    // 获取数组array中除了最后一个元素之外的所有元素
+  // （愚人码头注：去除数组array中的最后一个元素）。
+  // 参数：array (Array): 要查询的数组。
+  function initaial(array){
+    var result =[]
+    for(var i = 0;i<array.length-1;i++){
+      result.push(array[i])
+    }
+    return result
+  }
+  // 创建唯一值的数组，这个数组包含所有给定数组都包含的元素，
+  // 使用SameValueZero进行相等性比较。（注：可以理解为给定数组的交集）
+  // 参数：[arrays] (...Array): 待检查的数组。
+  function intersection(...array){
+
+  }
+  // 这个方法类似_.intersection，区别是它接受一个 iteratee 调用每一个arrays的每个值以产生一个值，
+  // 通过产生的值进行了比较。结果值是从第一数组中选择。iteratee 会传入一个参数：(value)。
+  // 参数：[arrays] (...Array): 待检查的数组。
+  //       [iteratee=_.identity] (Array|Function|Object|string): iteratee（迭代器）调用每个元素。
+  function intersectionBy(...array){
+
+  }
+  // 这个方法类似_.intersection，区别是它接受一个 comparator 调用比较arrays中的元素。
+  // 结果值是从第一数组中选择。comparator 会传入两个参数：(arrVal, othVal)
+  // 参数：[arrays] (...Array): 待检查的数组。
+  //       [comparator] (Function): comparator（比较器）调用每个元素。
+  function intersectionWith(...array){
+
+  }
 
   // 将 array 中的所有元素转换为由 separator 分隔的字符串。
   // 参数：array (Array): 要转换的数组。
@@ -189,17 +238,53 @@ var hubin2233 = function(){
     }
     return -1
   }
-  // 获取数组array中除了最后一个元素之外的所有元素
-  // （愚人码头注：去除数组array中的最后一个元素）。
+  // 获取array数组的第n个元素。如果n为负数，则返回从数组结尾开始的第n个元素。
   // 参数：array (Array): 要查询的数组。
-  function initaial(array){
-    var result =[]
-    for(var i = 0;i<array.length-1;i++){
-      result.push(array[i])
+  //     [n=0] (number): 要返回元素的索引值。
+  function nth(array,n=0){
+    if(n<0){
+      return array[array.length+n+1]
+    }else{
+      return array[n]
     }
-    return result
   }
+  // 移除数组array中所有和给定值相等的元素，使用SameValueZero 进行全等比较。
+  // 参数：array (Array): 要修改的数组。
+  //     [values] (...*): 要删除的值。
+  function pull(array,...values){
+    for(var i = 0;i<value.length;i++){
+      for(var j = 0;j<array.length;j++){
+        if (array[j] == value[i]) {
+          array.splice(j,1,)
+        }
+      }
+    }
+  }
+  // 这个方法类似_.pull，区别是这个方法接收一个要移除值的数组。
+  // Note: 不同于_.difference, 这个方法会改变数组 array。
+  // 参数：array (Array): 要修改的数组。
+  //     values (Array): 要移除值的数组
+  function pullAll(array,values){
 
+  }
+  // 这个方法类似于_.pullAll ，区别是这个方法接受一个 iteratee（迭代函数） 
+  // 调用 array 和 values的每个值以产生一个值，通过产生的值进行了比较。
+  // iteratee 会传入一个参数： (value)。
+  // 参数：array (Array): 要修改的数组。
+  //       values (Array): 要移除值的数组。
+  //       [iteratee=_.identity] (Array|Function|Object|string): iteratee（迭代器）调用每个元素。
+  function pullAll(array,values) {
+
+  }
+  // 这个方法类似于_.pullAll，区别是这个方法接受 comparator 调用array中的元素和values比较。
+  // comparator 会传入两个参数：(arrVal, othVal)。
+  // 注意: 和_.differenceWith 不同, 这个方法会改变数组 array。
+  // 参数：array (Array): 要修改的数组。
+  //     values (Array): 要移除值的数组。
+  //     [comparator] (Function): comparator（比较器）调用每个元素。
+  function pullAllWith(array,calues){
+
+  }
   // 反转array，使得第一个元素变为最后一个元素，
   // 第二个元素变为倒数第二个元素，依次类推。
   // 参数：array (Array): 要修改的数组。
@@ -210,29 +295,102 @@ var hubin2233 = function(){
     }
     return result
   }
-    //使用 SameValueZero 等值比较，返回首次 value 在数组array中被找到的 索引值，
-  //  如果 fromIndex 为负值，将从数组array尾端索引进行匹配。
-  // 参数：array (Array): 需要查找的数组。
-  //     value (*): 需要查找的值。
-  //     [fromIndex=0] (number): 开始查询的位置。
-  function indexOf(array,value,fromIndex=0){
-    for(var i = fromIndex;i<array.length;i++){
-      if (array[i]==value) {
+  // 使用二进制的方式检索来决定 value值
+  //  应该插入到数组中 尽可能小的索引位置，以保证array的排序。
+  //  参数：array (Array): 要检查的排序数组。
+  //         value (*): 要评估的值。
+  function sortedIndex(array,value){
+    for(var i =0;i<array.length;i++){
+      if (value<=array[i]) {
         return i
       }
     }
-    return -1
   }
-  // 使用二进制的方式检索来决定 value值 应该插入到数组中 
-  // 尽可能小的索引位置，以保证array的排序
+  // 这个方法类似_.sortedIndex ，除了它接受一个 iteratee （迭代函数），
+  // 调用每一个数组（array）元素，返回结果和value 值比较来计算排序。
+  // iteratee 会传入一个参数：(value)。
   // 参数：array (Array): 要检查的排序数组。
   //       value (*): 要评估的值。
+  //       [iteratee=_.identity] (Array|Function|Object|string): 迭代函数，调用每个元素
+  function sortedIndexBy(array,value){
+
+  }
+  // 这个方法类似_.indexOf，除了它是在已经排序的数组array上执行二进制检索。
+  // 参数：array (Array): 要搜索的数组。
+  //       value (*): 搜索的值。
   function sortedIndex(array,value){
-    for(var i = 0;i<array.length;i++){
-      if(array[i]>=value){
-        return i
+    for(var i = 0 ;i<array.length;i++){
+      if (value <=array[i]) {
+          return i          
+      }
+      if (i ==array.length-1) {
+          return -1
       }
     }
+  }
+  // 此方法类似于_.sortedIndex，
+  // 除了 它返回 value值 在 array 中尽可能大的索引位置（index）。
+  // 参数：array (Array): 要检查的排序数组。
+  //       value (*): 要评估的值。
+  function sortedLastIndex(array,value){
+    for(var i = array.length-1;i>0;i--){
+      if (value>=array[i]) {
+        return i+1
+      }
+    }
+  }
+  // 这个方法类似_.sortedLastIndex ，除了它接受一个 iteratee （迭代函数），
+  // 调用每一个数组（array）元素，返回结果和value 值比较来计算排序。
+  // iteratee 会传入一个参数：(value)。
+  // 参数：array (Array): 要检查的排序数组。
+  //       value (*): 要评估的值。
+  //       [iteratee=_.identity] (Array|Function|Object|string): 迭代函数，调用每个元素
+  function sortedLastIndexBy(array,value){
+
+  }
+  // 这个方法类似_.lastIndexOf，除了它是在已经排序的数组array上执行二进制检索
+  // 参数：array (Array): 要搜索的数组。
+  //       value (*): 搜索的值。
+  function sortedLastIndexOf(array,value){
+    for(var i = array.length-1;i>0;i++){
+      if (value>=array[i]) {
+        return i+1
+      }
+      if (i==0) {
+        return -1
+      }
+    }
+  }
+  // 这个方法类似_.uniq，除了它会优化排序数组
+  // 参数：array (Array): 要检查的数组。
+  function sortedUniq(array){
+    var result = []
+    for(var i = 0;i<array.length;i++){
+      if (array[i]!=array[i+1]) {
+        result.push(array[i])
+      }
+      if (i==array.length-1 && array[i]!=array[i-1]) {
+        result.push(array[i])
+      }
+    }
+    return result
+  }
+  // 这个方法类似_.uniqBy，除了它会优化排序数组。
+  // 参数：array (Array): 要检查的数组。
+  //       [iteratee] (Function): 迭代函数，调用每个元素。
+  function sortedUniqBy(array){
+
+  }
+  // 获取除了array数组第一个元素以外的全部元素。
+  // 参数：array (Array): 要检索的数组。
+  function tail(array){
+    return array.splice(0,1)
+  }
+  // 创建一个数组切片，从array数组的起始元素开始提取n个元素。
+  // 参数：array (Array): 要检索的数组。
+  //       [n=1] (number): 要提取的元素个数
+  function take(array,n=1){
+    return array.splice(0,n)
   }
   // 转换 value 为一个数组
   // 参数：value (*): 要转换的值
