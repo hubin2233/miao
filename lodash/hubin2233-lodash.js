@@ -335,8 +335,71 @@ var hubin2233 = function(){
   function uniqBy(array){
 
   }
+  // 这个方法类似于_.zip，除了它接收分组元素的数组，并且创建一个数组，分组元素到打包前的结构。（：返回数组的第一个元素包含所有的输入数组的第一元素，第一个元素包含了所有的输入数组的第二元素，依此类推。）
+  function unzip(array){
+
+  }
+  // 这个方法类似_.uniq ，除了它接受一个 iteratee （迭代函数），调用每一个数组（array）的每个元素以产生唯一性计算的标准。iteratee 调用时会传入一个参数：(value)。
+  function unzipBy(array){
+
+  }
   // 这个方法类似_.uniq， 除了它接受一个 comparator 调用比较arrays数组的每一个元素。 comparator 调用时会传入2个参数： (arrVal, othVal)。
-  function 
+  function unzipWith(array){
+
+  }
+  // 创建一个剔除所有给定值的新数组，剔除值的时候，使用SameValueZero做相等比较。
+  function without(array,...value){
+    let nums = []
+    array.forEach(it => {
+      if(!includes(val,it)){
+        nums.push(it)
+      }
+    });
+  }
+  // 创建一个给定数组唯一值的数组，使用symmetric difference做等值比较。返回值的顺序取决于他们数组的出现顺序。
+  function xor(...array){
+
+  }
+  // 这个方法类似_.xor ，除了它接受 iteratee（迭代器），这个迭代器 调用每一个 arrays（数组）的每一个值，以生成比较的新值。iteratee 调用一个参数：(value).
+  function xorBy(...array,identity){
+
+  }
+  // 该方法是像_.xor，除了它接受一个 comparator ，以调用比较数组的元素。 comparator 调用2个参数：(arrVal, othVal).
+  function xorWith(...array,identity){
+
+  }
+  // 创建一个分组元素的数组，数组的第一个元素包含所有给定数组的第一个元素，数组的第二个元素包含所有给定数组的第二个元素，以此类推。
+  function zip(...array){
+    let res = []
+    for(let i = 0;i<array.length;i++){
+
+    }
+    res.push()
+  }
+  // 这个方法类似_.fromPairs，除了它接受2个数组，第一个数组中的值作为属性标识符（属性名），第二个数组中的值作为相应的属性值
+  function zipObject(...props,...values){
+
+  }
+  // 这个方法类似_.zipObject，除了它支持属性路径。
+  function zipObjectDeep(...props,...values){
+
+  }
+  // 这个方法类似于_.zip，不同之处在于它接受一个 iteratee（迭代函数），来 指定分组的值应该如何被组合。 该iteratee调用每个组的元素： (...group).
+  function zipWith(...array,identity){
+
+  }
+  // 创建一个组成对象，key（键）是经过 iteratee（迭代函数） 执行处理collection中每个元素后返回的结果，每个key（键）对应的值是 iteratee（迭代函数）返回该key（键）的次数（注：迭代次数）。 iteratee 调用一个参数：(value)。
+  function counyBy(collection,identity){
+
+  }
+  // 通过 predicate（断言函数） 检查 collection（集合）中的 所有 元素是否都返回真值。一旦 predicate（断言函数） 返回假值，迭代就马上停止。predicate（断言函数）调用三个参数： (value, index|key, collection)。
+  function every(collection,identity){
+
+  }
+  // 遍历 collection（集合）元素，返回 predicate（断言函数）返回真值 的所有元素的数组。 predicate（断言函数）调用三个参数：(value, index|key, collection)。
+  function filter(collection,identity){
+    
+  }
   // 转换 value 为一个数组
   function toArray(value){
     var result = []
@@ -409,5 +472,6 @@ var hubin2233 = function(){
     difference,
     initaial,
     indexOf,
+    without,
   }
 }()
