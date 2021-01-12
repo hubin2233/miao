@@ -361,11 +361,10 @@ var hubin2233 = function(){
 
   }
   // 这个方法类似_.xor ，除了它接受 iteratee（迭代器），这个迭代器 调用每一个 arrays（数组）的每一个值，以生成比较的新值。iteratee 调用一个参数：(value).
-  function xorBy(...array,identity){
-    
+  function xorBy(identity){
   }
   // 该方法是像_.xor，除了它接受一个 comparator ，以调用比较数组的元素。 comparator 调用2个参数：(arrVal, othVal).
-  function xorWith(...array,identity){
+  function xorWith(identity){
 
   }
   // 创建一个分组元素的数组，数组的第一个元素包含所有给定数组的第一个元素，数组的第二个元素包含所有给定数组的第二个元素，以此类推。
@@ -375,17 +374,18 @@ var hubin2233 = function(){
 
     }
     res.push()
+    return res
   }
   // 这个方法类似_.fromPairs，除了它接受2个数组，第一个数组中的值作为属性标识符（属性名），第二个数组中的值作为相应的属性值
-  function zipObject(...props,...values){
+  function zipObject(props,...values){
 
   }
   // 这个方法类似_.zipObject，除了它支持属性路径。
-  function zipObjectDeep(...props,...values){
+  function zipObjectDeep(props,...values){
 
   }
   // 这个方法类似于_.zip，不同之处在于它接受一个 iteratee（迭代函数），来 指定分组的值应该如何被组合。 该iteratee调用每个组的元素： (...group).
-  function zipWith(...array,identity){
+  function zipWith(array,identity){
 
   }
   // 创建一个组成对象，key（键）是经过 iteratee（迭代函数） 执行处理collection中每个元素后返回的结果，每个key（键）对应的值是 iteratee（迭代函数）返回该key（键）的次数（注：迭代次数）。 iteratee 调用一个参数：(value)。
