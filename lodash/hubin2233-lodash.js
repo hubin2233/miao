@@ -362,7 +362,7 @@ var hubin2233 = function(){
   }
   // 这个方法类似_.xor ，除了它接受 iteratee（迭代器），这个迭代器 调用每一个 arrays（数组）的每一个值，以生成比较的新值。iteratee 调用一个参数：(value).
   function xorBy(...array,identity){
-
+    
   }
   // 该方法是像_.xor，除了它接受一个 comparator ，以调用比较数组的元素。 comparator 调用2个参数：(arrVal, othVal).
   function xorWith(...array,identity){
@@ -399,6 +399,147 @@ var hubin2233 = function(){
   // 遍历 collection（集合）元素，返回 predicate（断言函数）返回真值 的所有元素的数组。 predicate（断言函数）调用三个参数：(value, index|key, collection)。
   function filter(collection,identity){
     
+  }
+  // 遍历 collection（集合）元素，返回 predicate（断言函数）第一个返回真值的第一个元素。predicate（断言函数）调用3个参数： (value, index|key, collection)。
+  function find(array){
+
+  }
+  // 这个方法类似_.find ，不同之处在于，_.findLast是从右至左遍历collection （集合）元素的。
+  function findLast(array){
+
+  }
+  // 创建一个扁平化（注：同阶数组）的数组，这个数组的值来自collection（集合）中的每一个值经过 iteratee（迭代函数） 处理后返回的结果，并且扁平化合并。 iteratee 调用三个参数： (value, index|key, collection)。
+  function flatMap(array){
+
+  }
+  // 该方法类似_.flatMap，不同之处在于，_.flatMapDepth 会根据指定的 depth（递归深度）继续扁平化递归映射结果。
+  function flatMapDepth(collection){
+
+  }
+  // 调用 iteratee 遍历 collection(集合) 中的每个元素， iteratee 调用3个参数： (value, index|key, collection)。 如果迭代函数（iteratee）显式的返回 false ，迭代会提前退出。
+  function forEach(collection){
+
+  }
+  // 这个方法类似_.forEach，不同之处在于，_.forEachRight 是从右到左遍历集合中每一个元素的。
+  function forEachRight(collection){
+
+  }
+  // 创建一个对象，key 是 iteratee 遍历 collection(集合) 中的每个元素返回的结果。 分组值的顺序是由他们出现在 collection(集合) 中的顺序确定的。每个键对应的值负责生成 key 的元素组成的数组。iteratee 调用 1 个参数： (value)。
+  function groupBy(collection){
+
+  }
+  // 检查 value(值) 是否在 collection(集合) 中。如果 collection(集合)是一个字符串，那么检查 value（值，子字符串） 是否在字符串中， 否则使用SameValueZero 做等值比较。 如果指定 fromIndex 是负数，那么从 collection(集合) 的结尾开始检索。
+  function includes(collection,fromIndex,...value){
+    collection.forEach()
+  }
+  // 调用path（路径）上的方法处理 collection(集合)中的每个元素，返回一个数组，包含每次调用方法得到的结果。任何附加的参数提供给每个被调用的方法。如果methodName（方法名）是一个函数，每次调用函数时，内部的 this 指向集合中的每个元素。
+  function invokeMap(collection,path,...args){
+    collection.forEach()
+  }
+  // 创建一个对象组成， key（键） 是 collection（集合）中的每个元素经过 iteratee（迭代函数） 处理后返回的结果。 每个 key（键）对应的值是生成key（键）的最后一个元素。iteratee（迭代函数）调用1个参数：(value)。
+  function keyBy(collection,...identity){
+    collection.forEach()
+  }
+  //   创建一个数组， value（值） 是 iteratee（迭代函数）遍历 collection（集合）中的每个元素后返回的结果。 iteratee（迭代函数）调用3个参数：
+  // (value, index|key, collection).
+  function map(collection,...identity){
+
+  }
+  // 此方法类似于_.sortBy，除了它允许指定 iteratee（迭代函数）结果如何排序。 如果没指定 orders（排序），所有值以升序排序。 否则，指定为"desc" 降序，或者指定为 "asc" 升序，排序对应值。
+  function orderBy(collection ,...orders){
+
+  }
+  // 创建一个分成两组的元素数组，第一组包含predicate（断言函数）返回为 truthy（真值）的元素，第二组包含predicate（断言函数）返回为 falsey（假值）的元素。predicate 调用1个参数：(value)。
+  function partition(collection,...identity){
+
+  }
+  // 压缩 collection（集合）为一个值，通过 iteratee（迭代函数）遍历 collection（集合）中的每个元素，每次返回的值会作为下一次迭代使用(注：作为iteratee（迭代函数）的第一个参数使用)。 如果没有提供 accumulator，则 collection（集合）中的第一个元素作为初始值
+  function reduce(collection,...accumulator){
+
+  }
+  // 这个方法类似_.reduce ，除了它是从右到左遍历collection（集合）中的元素的。
+  function reduceRight(collection,...accumulator){
+
+  }
+  // _.filter的反向方法;此方法 返回 predicate（断言函数） 不 返回 truthy（真值）的collection（集合）元素（注释：非真）
+  function reject(collection,...identity){
+
+  }
+  // 从collection（集合）中获得一个随机元素。
+  function sample(collection){
+
+  }
+  // 从collection（集合）中获得 n 个随机元素。
+  function sampleSize(collection ,n=1){
+
+  }
+  // 创建一个被打乱值的集合。 使用Fisher-Yates shuffle 版本。
+  function shuffle(collection){
+
+  }
+  // 返回collection（集合）的长度，如果集合是类数组或字符串，返回其 length ；如果集合是对象，返回其可枚举属性的个数。
+  function size(collection){
+    let result = collection.length
+    return result
+  }
+  // 通过 predicate（断言函数） 检查collection（集合）中的元素是否存在 任意 truthy（真值）的元素，一旦 predicate（断言函数） 返回 truthy（真值），遍历就停止。 predicate 调用3个参数：(value, index|key, collection)。
+  function some(collection,...identity){
+
+  }
+  // 创建一个元素数组。 以 iteratee 处理的结果升序排序。 这个方法执行稳定排序，也就是说相同元素会保持原始排序。 iteratees 调用1个参数： (value)。
+  function sortBy(collection,...identity){
+
+  }
+  // 推迟调用func，直到当前堆栈清理完毕。 调用时，任何附加的参数会传给func。
+  function defer(func,...args){
+
+  }
+  // 延迟 wait 毫秒后调用 func。 调用时，任何附加的参数会传给func。
+  function delay(func,wait){
+
+  }
+  // 如果 value 不是数组, 那么强制转为数组。
+  function castArray(value){
+    if(value ==Array){
+      return value
+    }
+    let result = []
+    for(let i = 0;i<arguments.length;i++){
+      result.push(arguments[i])
+    }
+      return result
+  }
+  // 通过调用断言source的属性与 object 的相应属性值，检查 object是否符合 source。当source偏应用时，这种方法和_.conforms函数是等价的。
+  function cconformsTo(object,source){
+    for (let i in object) {
+      if (source[i] && !source[i](obj[i])) {
+          return false;
+      }
+    }
+    return true
+  }
+  // 执行SameValueZero 比较两者的值，来确定它们是否相等
+  function eq(value,other){
+    if (Number.isNaN(val) && Number.isNaN(other)) {
+      return true;
+    }
+    return val === other;
+  }
+  // 检查 value是否大于 other。
+  function gt(value,other){
+    return  value > other 
+  }
+  // 检查 value是否大于或者等于 other
+  function gte(value,other){
+    return value == other
+  }
+  // 检查 value 是否是一个类 arguments 对象。
+ function isArguments(value){
+  return Object.prototype.toString.call(value) === '[object Arguments]'
+ }
+  //  检查 value 是否是 Array 类对象。
+  function isArray(value){
+    return Object.prototype.toString.call(value) === '[object Array]'
   }
   // 转换 value 为一个数组
   function toArray(value){
