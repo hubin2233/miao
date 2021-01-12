@@ -541,6 +541,7 @@ var hubin2233 = function(){
   function isArray(value){
     return Object.prototype.toString.call(value) === '[object Array]'
   }
+  
   // 转换 value 为一个数组
   function toArray(value){
     var result = []
