@@ -124,6 +124,12 @@ var hubin2233 = function(){
       }
     }
   }
+  // 根据 depth 递归减少 array 的嵌套层级
+  function flattenDepth(array,depth=1){
+    for(let i =0;i<array.length;i++){
+      
+    }
+  }
   // 与_.toPairs正好相反；这个方法返回一个由键值对pairs构成的对象。
   function fromPairs(array){
 
