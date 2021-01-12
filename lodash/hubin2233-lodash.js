@@ -32,14 +32,19 @@ var hubin2233 = function(){
   // （愚人码头注：即创建一个新数组，这个数组中的值，为第一个数字（array 参数）排除了给定数组中的值。）
   // 该方法使用 SameValueZero做相等比较。结果值的顺序是由第一个数组中的顺序确定。
   function difference(array,...values){
-    var nums = concat([], ...values);
-    var result = [];
-    for (var i = 0; i < array.length; i++) {
-        if (nums.indexOf(array[i]) == -1) {
-            result.push(array[i]);
+    let val = []
+    let res = []
+
+    for (let i = 0; i < values.length; i++) {
+        val.push(...values[i])
+    }
+
+    for (let i = 0; i < array.length; i++) {
+        if (!val.includes(array[i])) {
+            res.push(array[i])
         }
     }
-    return result;
+    return res
   }
   // 这个方法类似_.difference ，除了它接受一个 iteratee （注：迭代器）， 
   // 调用array 和 values 中的每个元素以产生比较的标准。 结果值是从第一数组中选择。
@@ -112,8 +117,8 @@ var hubin2233 = function(){
   function flattenDeep(array){
     var result = []
     for(var i =0 ;i<array.length;i++){
-      if(array[i][0]){
-        flattenDeep(result)
+      if(Array.isArray(array[i])){
+        result.push(...flattenDeep(array[i]))
       }else{
         result.push(array[i])
       }
@@ -541,7 +546,7 @@ var hubin2233 = function(){
   function isArray(value){
     return Object.prototype.toString.call(value) === '[object Array]'
   }
-  
+
   // 转换 value 为一个数组
   function toArray(value){
     var result = []
